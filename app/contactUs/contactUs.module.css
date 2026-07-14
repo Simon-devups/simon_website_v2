@@ -1,0 +1,734 @@
+/* app/contact/page.module.css */
+
+.page {
+  /* wrapper for consistency with other pages */
+}
+
+/* ---------- PAGE HERO ---------- */
+.pageHero {
+  padding: 70px 0 30px;
+  overflow: hidden;
+}
+
+.pageHeroGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.pageHero h1 {
+  font-size: clamp(2rem, 3.6vw, 2.75rem);
+  line-height: 1.4;
+}
+
+.pageHero p {
+  color: var(--ink-soft);
+  font-size: 1.04rem;
+  max-width: 560px;
+  margin-top: 18px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  margin-bottom: 16px;
+}
+
+.breadcrumb a {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.heroActions {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pageHeroGrid > div:first-child > * {
+  opacity: 0;
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+.pageHeroGrid > div:first-child .breadcrumb {
+  animation-delay: 0.05s;
+}
+
+.pageHeroGrid > div:first-child :global(.eyebrow) {
+  animation-delay: 0.12s;
+}
+
+.pageHeroGrid > div:first-child h1 {
+  animation-delay: 0.2s;
+}
+
+.pageHeroGrid > div:first-child p {
+  animation-delay: 0.3s;
+}
+
+.pageHeroGrid > div:first-child .heroActions {
+  animation-delay: 0.4s;
+}
+
+.heroArtSm {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.3s forwards;
+  position: relative;
+  aspect-ratio: 1 / 0.85;
+}
+
+.heroBlobSm {
+  position: absolute;
+  inset: 6%;
+  background: linear-gradient(150deg, var(--blue) 0%, var(--blue-dark) 100%);
+  border-radius: 42% 58% 60% 40% / 46% 40% 60% 54%;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.heroBlobSm::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 28% 22%, rgba(255, 255, 255, 0.35), transparent 45%);
+}
+
+.heroBlobSm::after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  right: -18%;
+  bottom: -22%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+}
+
+.heroOrangeDotSm {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--orange), var(--orange-2));
+  top: 0;
+  left: 2%;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+  animation: pulseDot 3.4s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+}
+
+.pingRing {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 110px;
+  height: 110px;
+  border-radius: 32px;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  pointer-events: none;
+  animation: pingRing 3.2s cubic-bezier(0.4, 0, 0.3, 1) infinite;
+}
+
+.pingRing.r2 {
+  animation-delay: 1.1s;
+}
+
+.pingRing.r3 {
+  animation-delay: 2.2s;
+}
+
+@keyframes pingRing {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.85);
+    opacity: 0;
+  }
+}
+
+.centerIcon {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 110px;
+  height: 110px;
+  border-radius: 32px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  color: var(--blue);
+  z-index: 1;
+}
+
+.floatCard {
+  position: absolute;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  animation: floatCard 4.2s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+.floatCard .dot {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--bg-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+  font-size: 1rem;
+}
+
+.fc1 {
+  top: 12%;
+  right: 4%;
+}
+
+.fc2 {
+  bottom: 16%;
+  left: 0%;
+  animation-delay: 0.7s;
+}
+
+.fc3 {
+  bottom: 0%;
+  right: 18%;
+  animation-delay: 1.4s;
+}
+
+/* ---------- CONTACT INFO CARDS ---------- */
+.contactInfo {
+  padding: 50px 0 20px;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.infoCard {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px 26px;
+  text-align: center;
+  transition: 0.25s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.infoCard:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-4px);
+  border-color: transparent;
+}
+
+.infoIcon {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: var(--bg-soft);
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.infoCard h3 {
+  font-size: 1.02rem;
+}
+
+.infoCard .val {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  direction: ltr;
+}
+
+.infoCard .val.rtl {
+  direction: rtl;
+}
+
+.miniBtn {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--blue);
+  background: var(--bg-soft);
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.miniBtn:hover {
+  background: var(--blue);
+  color: #fff;
+}
+
+/* ---------- FORM + SIDE PANEL ---------- */
+.contactMain {
+  padding: 70px 0 30px;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 30px;
+  align-items: stretch;
+}
+
+.formCard {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 40px;
+  box-shadow: var(--shadow);
+}
+
+.formCard h2 {
+  font-size: 1.35rem;
+  margin-bottom: 8px;
+}
+
+.formCard .sub {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  margin: 0 0 26px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.field input,
+.field textarea {
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  padding: 13px 16px;
+  font-family: inherit;
+  font-size: 0.92rem;
+  background: var(--bg-soft);
+  color: var(--ink);
+  transition: 0.2s;
+  resize: none;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  background: #fff;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.btnBlock {
+  width: 100%;
+}
+
+.sidePanel {
+  background: linear-gradient(150deg, var(--blue) 0%, var(--blue-dark) 100%);
+  border-radius: var(--radius);
+  padding: 40px 32px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.sidePanel::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  top: -120px;
+  left: -90px;
+}
+
+.sidePanel h3 {
+  font-size: 1.15rem;
+  position: relative;
+  z-index: 1;
+}
+
+.sideItem {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.sideItem .ic {
+  flex: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.sideItem strong {
+  display: block;
+  font-size: 0.92rem;
+  margin-bottom: 3px;
+}
+
+.sideItem span {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.84rem;
+  direction: ltr;
+  display: block;
+}
+
+.sideItem span.rtl {
+  direction: rtl;
+}
+
+.sideMap {
+  margin-top: auto;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.08);
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.85rem;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+/* ---------- SOCIAL BAND ---------- */
+.socialBandWrap {
+  padding: 60px 0 30px;
+}
+
+.socialBand {
+  background: linear-gradient(120deg, var(--blue) 0%, var(--blue-dark) 100%);
+  border-radius: 34px;
+  padding: 50px 6%;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.socialBand::before {
+  content: "";
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  bottom: -180px;
+  right: -90px;
+}
+
+.socialBand h3 {
+  font-size: 1.4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.socialBand p {
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 520px;
+  margin: 12px auto 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.socialEyebrow {
+  background: rgba(255, 255, 255, 0.14) !important;
+  color: #fff !important;
+}
+
+.socialEyebrow::before {
+  background: #fff !important;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.socialIcons a {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  transition: 0.25s;
+}
+
+.socialIcons a:hover {
+  background: #fff;
+  color: var(--blue);
+  transform: translateY(-4px);
+}
+
+/* ---------- QUICK NOTE ---------- */
+.quickNote {
+  padding: 20px 0 90px;
+}
+
+.noteBox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--bg-soft);
+  border-radius: var(--radius);
+  padding: 26px 32px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.noteBox .txt {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.noteBox .txt .ic {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: var(--shadow);
+  flex: none;
+}
+
+.noteBox strong {
+  display: block;
+  font-size: 0.98rem;
+}
+
+.noteBox span {
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 980px) {
+  .pageHeroGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroArtSm {
+    order: -1;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .infoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .noteBox {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 680px) {
+  .pageHero {
+    text-align: center;
+  }
+
+  .pageHero p {
+    margin-inline: auto;
+  }
+
+  .breadcrumb {
+    justify-content: center;
+  }
+
+  .heroActions {
+    justify-content: center;
+  }
+
+  .formCard {
+    padding: 26px;
+  }
+
+  .sidePanel {
+    padding: 30px 24px;
+  }
+
+  .noteBox {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .noteBox .txt {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroArtSm {
+    max-width: 280px;
+  }
+
+  .floatCard {
+    font-size: 0.7rem;
+    padding: 10px 12px;
+  }
+
+  .floatCard .dot {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+
+  .fc1 {
+    top: 6%;
+    right: 0%;
+  }
+
+  .fc2 {
+    bottom: 10%;
+    left: 0%;
+  }
+
+  .fc3 {
+    bottom: 0%;
+    right: 8%;
+  }
+
+  .heroOrangeDotSm {
+    width: 70px;
+    height: 70px;
+    font-size: 1.4rem;
+    top: 0;
+    left: 0%;
+  }
+
+  .pingRing {
+    width: 80px;
+    height: 80px;
+  }
+
+  .centerIcon {
+    width: 80px;
+    height: 80px;
+    font-size: 1.8rem;
+    border-radius: 24px;
+  }
+
+  .socialIcons a {
+    width: 48px;
+    height: 48px;
+    font-size: 1.1rem;
+  }
+}
