@@ -281,7 +281,7 @@ nav ul a.active{ color: var(--blue); }
 
 /* ---------- SERVICES ---------- */
 .services{ padding:60px 0; }
-.services-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important; gap:24px; margin-top:44px; }
+.services-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(280, 1fr)) !important; gap:24px; margin-top:44px; }
 .service-card{
   background:#fff; border-radius: var(--radius); padding:34px;
   border:1px solid var(--line); transition:.25s;
@@ -451,7 +451,8 @@ nav ul a.active{ color: var(--blue); }
 
 /* ---------- CONTACT ---------- */
 .contact{ padding:60px 0 90px; }
-.contact-grid{ display:grid; grid-template-columns: .85fr 1.15fr; gap:28px; margin-top:44px; align-items:start; }
+/* تبدیل به بلاک شد */
+.contact-grid{ display:grid; grid-template-columns: .85fr 1.15fr; gap:28px; margin-top:44px; align-items:start; display: block;}
 .contact-info{ display:flex; flex-direction:column; gap:18px; }
 .contact-card{
   background:#fff; border-radius:16px; border:1px solid var(--line);
@@ -510,9 +511,11 @@ nav ul a.active{ color: var(--blue); }
 }
 
 @media (max-width:680px){
+    .hero-orange-dot, .hc1 ,.hc2{display: none;}
+
   .container{ width:90%; }
   section{ scroll-margin-top: 76px; }
-  .hero{ padding:52px 0 28px; text-align:center; }
+  .hero{ padding:0 0 28px; text-align:center; }
   .hero p{ margin-inline:auto; }
   .hero-actions{ justify-content:center; }
   .hero-art{ max-width:300px; }

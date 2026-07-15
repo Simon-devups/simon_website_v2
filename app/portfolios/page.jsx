@@ -59,15 +59,15 @@ export default function PortfolioPage() {
                     <div className={styles.bannerBlobA}></div>
                     <div className={styles.bannerBlobB}></div>
                     <div className="container">
-                        <span className="eyebrow">نمونه‌کارهای سایمون</span>
-                        <h1>روایت پروژه‌هایی که با افتخار طراحی و اجرا کرده‌ایم</h1>
+                        <span className="eyebrow">پکیج‌های طراحی سایت سایمون</span>
+                        <h1>سه پکیج حرفه‌ای برای هر نوع کسب‌وکار</h1>
                         <p className="section-sub center" style={{ marginTop: "18px" }}>
-                            هر پروژه برای ما یک داستان است؛ در ادامه با جزئیات کامل، سه نمونه از پروژه‌هایی را مرور می‌کنیم که تیم سایمون از ایده تا اجرا همراه صاحبان کسب‌وکار بوده است.
+                            چه یک برند شرکتی باشید، چه فردی خلاق یا صاحب فروشگاه اینترنتی؛ ما پکیج‌های طراحی اختصاصی را آماده کرده‌ایم که متناسب با نیاز شما، بهترین حضور دیجیتال را بسازیم.
                         </p>
                         <div className={styles.breadcrumb}>
                             <Link href="/">صفحه اصلی</Link>
                             <span>/</span>
-                            <span>نمونه کارها</span>
+                            <span>پکیج‌های طراحی</span>
                         </div>
                     </div>
                 </section>
@@ -76,53 +76,53 @@ export default function PortfolioPage() {
                 <section className={styles.portfolioStats}>
                     <div className="container">
                         <div className={styles.statsBar}>
-                            <div className={styles.statItem}><strong>۳</strong><span>پروژه شاخص</span></div>
+                            <div className={styles.statItem}><strong>۳</strong><span>پکیج تخصصی</span></div>
                             <div className={styles.statSep}></div>
-                            <div className={styles.statItem}><strong>۳</strong><span>صنعت متفاوت</span></div>
+                            <div className={styles.statItem}><strong>۱۰۰٪</strong><span>طراحی اختصاصی</span></div>
                             <div className={styles.statSep}></div>
-                            <div className={styles.statItem}><strong>۹۸٪</strong><span>رضایت مشتری</span></div>
+                            <div className={styles.statItem}><strong>پشتیبانی</strong><span>۲۴/۷</span></div>
                             <div className={styles.statSep}></div>
-                            <div className={styles.statItem}><strong>۱۰۰٪</strong><span>تحویل به‌موقع</span></div>
+                            <div className={styles.statItem}><strong>سئو</strong><span>بهینه‌سازی شده</span></div>
                         </div>
                     </div>
                 </section>
 
-                {/* ===== CASE STUDY 1 : E-COMMERCE ===== */}
+                {/* ===== PACKAGE 1 : CORPORATE ===== */}
                 <section className={styles.caseStudy}>
                     <div className={`container ${styles.caseGrid}`}>
                         <div className={styles.caseText}>
                             <span className={styles.caseIndex}>۰۱</span>
-                            <span className="eyebrow">فروشگاه اینترنتی</span>
-                            <h2 className={styles.caseTitle}>فروشگاه اینترنتی نگین؛ از یک ایده ساده تا یک برند فروش آنلاین</h2>
+                            <span className="eyebrow">پکیج شرکتی</span>
+                            <h2 className={styles.caseTitle}>پکیج شرکتی؛ هویت دیجیتال حرفه‌ای برای برند شما</h2>
                             <p className={styles.caseDesc}>
-                                نگین با یک فروشگاه کوچک لوازم خانگی نزد ما آمد و به دنبال راهی بود تا فروش خود را از فضای فیزیکی به دنیای آنلاین گسترش دهد. تیم سایمون با طراحی یک فروشگاه اینترنتی مدرن، سریع و کاملاً ریسپانسیو، تجربه‌ی خرید ساده و مطمئنی را برای مشتریان نگین فراهم کرد؛ از دسته‌بندی هوشمند محصولات و درگاه پرداخت امن گرفته تا پنل مدیریت اختصاصی برای ثبت و ویرایش سریع محصولات.
+                                این پکیج برای سازمان‌ها، شرکت‌ها و برندهایی طراحی شده که به دنبال یک وب‌سایت جامع، شکیل و قابل اعتماد هستند. از صفحه‌ی معرفی برند و تیم گرفته تا بخش خدمات، نمونه‌کارها، وبلاگ و فرم تماس؛ همه چیز برای نمایش حرفه‌ای کسب‌وکار شما آماده است. طراحی مدرن، ریسپانسیو و بهینه‌سازی شده برای موتورهای جستجو، همراه با پنل مدیریت آسان برای به‌روزرسانی محتوا.
                             </p>
 
                             <div className={styles.caseCsGrid}>
                                 <div className={styles.box}>
-                                    <h4>چالش پروژه</h4>
-                                    <p>نبود بستری آنلاین برای معرفی و فروش محصولات و از دست رفتن مشتریانی که به دنبال خرید اینترنتی بودند.</p>
+                                    <h4>نیاز کسب‌وکار</h4>
+                                    <p>داشتن یک وب‌سایت رسمی برای معرفی برند، جلب اعتماد مشتریان و ارائه اطلاعات کامل به مخاطبان.</p>
                                 </div>
                                 <div className={styles.box}>
                                     <h4>راهکار سایمون</h4>
-                                    <p>طراحی فروشگاهی سبک و سریع با تمرکز بر تجربه‌ی کاربری، پرداخت امن و مدیریت آسان محصولات.</p>
+                                    <p>طراحی سایت شرکتی با معماری اطلاعات منظم، رابط کاربری شیک، سرعت بالا و قابلیت مدیریت آسان محتوا.</p>
                                 </div>
                             </div>
 
                             <div className={styles.caseStats}>
-                                <div><strong>٪۶۵+</strong><span>افزایش فروش آنلاین</span></div>
-                                <div><strong>۴ هفته</strong><span>زمان طراحی و اجرا</span></div>
-                                <div><strong>۱۲۰+</strong><span>محصول راه‌اندازی‌شده</span></div>
+                                <div><strong>تا ۱۰</strong><span>صفحه تخصصی</span></div>
+                                <div><strong>۲ هفته</strong><span>زمان تحویل</span></div>
+                                <div><strong>سئو</strong><span>داخلی و فنی</span></div>
                             </div>
 
                             <div className={styles.caseTags}>
-                                <span>طراحی ریسپانسیو</span>
-                                <span>درگاه پرداخت آنلاین</span>
-                                <span>پنل مدیریت محصولات</span>
+                                <span>طراحی اختصاصی</span>
+                                <span>ریسپانسیو</span>
+                                <span>پنل مدیریت</span>
                                 <span>بهینه‌سازی سرعت</span>
                             </div>
 
-                            <div className={styles.caseDone}>✅ پروژه تکمیل‌شده و در حال بهره‌برداری</div>
+                            <div className={styles.caseDone}>✅ پکیج آماده ارائه – مناسب برای شرکت‌ها و برندها</div>
                         </div>
 
                         <div className={styles.caseVisual}>
@@ -151,48 +151,48 @@ export default function PortfolioPage() {
                                 <rect x="122" y="336" width="180" height="12" rx="6" fill="var(--ph)" />
                                 <rect x="452" y="308" width="106" height="44" rx="12" fill="var(--blue)" />
                             </svg>
-                            <div className={`${styles.caseChip} ${styles.cc1}`}><span className={styles.dot}>🛒</span> سبد خرید هوشمند</div>
-                            <div className={`${styles.caseChip} ${styles.cc2}`}><span className={`${styles.dot} ${styles.peach}`}>⚡</span> بارگذاری زیر ۲ ثانیه</div>
+                            <div className={`${styles.caseChip} ${styles.cc1}`}><span className={styles.dot}>🏢</span> صفحه برند و تیم</div>
+                            <div className={`${styles.caseChip} ${styles.cc2}`}><span className={`${styles.dot} ${styles.peach}`}>⚡</span> سرعت بارگذاری بالا</div>
                         </div>
                     </div>
                 </section>
 
-                {/* ===== CASE STUDY 2 : DENTAL CLINIC ===== */}
+                {/* ===== PACKAGE 2 : PERSONAL ===== */}
                 <section className={`${styles.caseStudy} ${styles.alt}`}>
                     <div className={`container ${styles.caseGrid} ${styles.reverse}`}>
                         <div className={styles.caseText}>
                             <span className={styles.caseIndex}>۰۲</span>
-                            <span className="eyebrow" style={{ background: "#FFF3DD", color: "var(--orange-2)" }}>پزشکی و سلامت</span>
-                            <h2 className={styles.caseTitle}>کلینیک دندانپزشکی درخشان؛ نوبت‌دهی آنلاین و اعتمادسازی دیجیتال</h2>
+                            <span className="eyebrow" style={{ background: "#FFF3DD", color: "var(--orange-2)" }}>پکیج شخصی</span>
+                            <h2 className={styles.caseTitle}>پکیج شخصی؛ حضور آنلاین برای افراد، مشاغل کوچک و فریلنسرها</h2>
                             <p className={styles.caseDesc}>
-                                کلینیک درخشان با وجود کیفیت بالای خدمات، حضور دیجیتالی قابل توجهی نداشت و بخش زیادی از تماس‌های تلفنی صرف هماهنگی نوبت می‌شد. سایمون با طراحی وب‌سایتی حرفه‌ای و آرام‌بخش، معرفی پزشکان، خدمات و نظرات بیماران را در کنار یک سیستم نوبت‌دهی آنلاین ساده قرار داد تا هم اعتماد بیماران جلب شود و هم زمان کارکنان کلینیک آزاد شود.
+                                این پکیج ویژه افرادی است که می‌خواهند با هزینه‌ای مقرون‌به‌صرفه، یک وب‌سایت شخصی، نمونه‌کارهای خلاقانه یا صفحه‌ی معرفی خدمات خود داشته باشند. از رزومه و گالری آثار گرفته تا فرم تماس و بخش وبلاگ؛ همه چیز برای نمایش توانمندی‌های شما در فضای دیجیتال. طراحی مینیمال، زیبا و کاملاً ریسپانسیو، مناسب برای موبایل و دسکتاپ.
                             </p>
 
                             <div className={styles.caseCsGrid}>
                                 <div className={styles.box}>
-                                    <h4>چالش پروژه</h4>
-                                    <p>حجم بالای تماس تلفنی برای رزرو نوبت و نبود رتبه‌ی مناسب در جست‌وجوی محلی گوگل.</p>
+                                    <h4>نیاز کسب‌وکار</h4>
+                                    <p>داشتن یک وب‌سایت شخصی برای معرفی خود، جذب مشتری یا کارفرما و نمایش نمونه‌کارها.</p>
                                 </div>
                                 <div className={styles.box}>
                                     <h4>راهکار سایمون</h4>
-                                    <p>سیستم نوبت‌دهی آنلاین، سئوی محلی هدفمند و طراحی رابطی آرام و قابل‌اعتماد برای بیماران.</p>
+                                    <p>طراحی سایت شخصی با تأکید بر هویت فردی، گالری آثار، رزومه آنلاین و فرم ارتباطی ساده.</p>
                                 </div>
                             </div>
 
                             <div className={styles.caseStats}>
-                                <div><strong>٪۸۰+</strong><span>افزایش رزرو آنلاین</span></div>
-                                <div><strong>رتبه ۱</strong><span>در جست‌وجوی محلی گوگل</span></div>
-                                <div><strong>۳ هفته</strong><span>زمان طراحی و راه‌اندازی</span></div>
+                                <div><strong>تا ۵</strong><span>صفحه اختصاصی</span></div>
+                                <div><strong>۱۰ روز</strong><span>زمان تحویل</span></div>
+                                <div><strong>گالری</strong><span>آثار و تصاویر</span></div>
                             </div>
 
                             <div className={styles.caseTags}>
-                                <span>سئوی محلی</span>
-                                <span>نوبت‌دهی آنلاین</span>
-                                <span>طراحی مدرن و آرام</span>
-                                <span>بهینه برای موبایل</span>
+                                <span>طراحی مینیمال</span>
+                                <span>ریسپانسیو</span>
+                                <span>رزومه آنلاین</span>
+                                <span>فرم تماس</span>
                             </div>
 
-                            <div className={styles.caseDone}>✅ پروژه تکمیل‌شده و در حال بهره‌برداری</div>
+                            <div className={styles.caseDone}>✅ پکیج آماده ارائه – مناسب برای افراد، فریلنسرها و مشاغل کوچک</div>
                         </div>
 
                         <div className={styles.caseVisual}>
@@ -219,48 +219,48 @@ export default function PortfolioPage() {
                                 <rect x="122" y="350" width="320" height="10" rx="5" fill="var(--ph)" />
                                 <rect x="122" y="368" width="260" height="10" rx="5" fill="var(--ph)" />
                             </svg>
-                            <div className={`${styles.caseChip} ${styles.cc1}`}><span className={styles.dot}>📅</span> رزرو آنلاین نوبت</div>
-                            <div className={`${styles.caseChip} ${styles.cc2}`}><span className={`${styles.dot} ${styles.peach}`}>⭐</span> رضایت ۹۶٪ بیماران</div>
+                            <div className={`${styles.caseChip} ${styles.cc1}`}><span className={styles.dot}>🧑‍💻</span> رزومه و نمونه‌کار</div>
+                            <div className={`${styles.caseChip} ${styles.cc2}`}><span className={`${styles.dot} ${styles.peach}`}>📱</span> طراحی موبایل‌فرندلی</div>
                         </div>
                     </div>
                 </section>
 
-                {/* ===== CASE STUDY 3 : REAL ESTATE ===== */}
+                {/* ===== PACKAGE 3 : E-COMMERCE ===== */}
                 <section className={styles.caseStudy}>
                     <div className={`container ${styles.caseGrid}`}>
                         <div className={styles.caseText}>
                             <span className={styles.caseIndex}>۰۳</span>
-                            <span className="eyebrow">املاک و مستغلات</span>
-                            <h2 className={styles.caseTitle}>آژانس املاک ونداد؛ جست‌وجوی هوشمند ملک روی نقشه</h2>
+                            <span className="eyebrow">پکیج فروشگاهی</span>
+                            <h2 className={styles.caseTitle}>پکیج فروشگاهی؛ فروشگاه اینترنتی کامل و قدرتمند</h2>
                             <p className={styles.caseDesc}>
-                                ونداد با آرشیوی بزرگ از فایل‌های ملکی، به پلتفرمی نیاز داشت که مشتریان بتوانند به‌سادگی و بر اساس موقعیت جغرافیایی، بودجه و متراژ، ملک مورد نظرشان را پیدا کنند. سایمون با طراحی یک وب‌سایت مبتنی بر نقشه‌ی تعاملی، فیلترهای پیشرفته‌ی جست‌وجو و گالری تصاویر باکیفیت، تجربه‌ای شبیه پلتفرم‌های بزرگ املاک را برای ونداد فراهم کرد.
+                                این پکیج برای کسب‌وکارهایی طراحی شده که می‌خواهند محصولات خود را به صورت آنلاین بفروشند. یک فروشگاه اینترنتی حرفه‌با دسته‌بندی محصولات، فیلترهای پیشرفته، سبد خرید، درگاه پرداخت امن، مدیریت سفارشات و پنل جامع برای مدیریت محصولات و تخفیف‌ها. همچنین قابلیت اتصال به سیستم‌های انبارداری و ارسال خودکار پیامک و ایمیل.
                             </p>
 
                             <div className={styles.caseCsGrid}>
                                 <div className={styles.box}>
-                                    <h4>چالش پروژه</h4>
-                                    <p>پراکندگی اطلاعات فایل‌های ملکی و دشواری مشتریان در جست‌وجوی ملک مناسب بر اساس منطقه.</p>
+                                    <h4>نیاز کسب‌وکار</h4>
+                                    <p>داشتن یک فروشگاه اینترنتی با امکان مدیریت آسان محصولات، پرداخت آنلاین و پیگیری سفارشات.</p>
                                 </div>
                                 <div className={styles.box}>
                                     <h4>راهکار سایمون</h4>
-                                    <p>نقشه‌ی تعاملی، فیلتر پیشرفته‌ی جست‌وجو و فرم آنلاین درخواست بازدید از ملک.</p>
+                                    <p>طراحی فروشگاهی با معماری پیشرفته، درگاه پرداخت، پنل مدیریت، و امکانات بازاریابی مثل کد تخفیف.</p>
                                 </div>
                             </div>
 
                             <div className={styles.caseStats}>
-                                <div><strong>۲۰۰+</strong><span>فایل ملکی ثبت‌شده</span></div>
-                                <div><strong>٪۵۰+</strong><span>افزایش تماس مشتریان</span></div>
-                                <div><strong>۵ هفته</strong><span>زمان طراحی و اجرا</span></div>
+                                <div><strong>نامحدود</strong><span>محصول</span></div>
+                                <div><strong>۴ هفته</strong><span>زمان تحویل</span></div>
+                                <div><strong>پرداخت</strong><span>امن و سریع</span></div>
                             </div>
 
                             <div className={styles.caseTags}>
-                                <span>نقشه تعاملی</span>
-                                <span>فیلتر پیشرفته جست‌وجو</span>
-                                <span>گالری تصاویر</span>
-                                <span>فرم درخواست بازدید</span>
+                                <span>دسته‌بندی پیشرفته</span>
+                                <span>درگاه پرداخت</span>
+                                <span>مدیریت سفارشات</span>
+                                <span>بازاریابی آنلاین</span>
                             </div>
 
-                            <div className={styles.caseDone}>✅ پروژه تکمیل‌شده و در حال بهره‌برداری</div>
+                            <div className={styles.caseDone}>✅ پکیج آماده ارائه – مناسب برای فروشگاه‌های آنلاین و خرده‌فروشی‌ها</div>
                         </div>
 
                         <div className={styles.caseVisual}>
@@ -286,8 +286,8 @@ export default function PortfolioPage() {
                                 <rect x="306" y="370" width="60" height="12" rx="6" fill="var(--blue)" />
                                 <rect x="458" y="336" width="98" height="66" rx="14" fill="var(--orange)" />
                             </svg>
-                            <div className={`${styles.caseChip} ${styles.cc1}`}><span className={styles.dot}>📍</span> نقشه تعاملی ملک</div>
-                            <div className={`${styles.caseChip} ${styles.cc2}`}><span className={`${styles.dot} ${styles.peach}`}>🏠</span> +۲۰۰ فایل ملکی</div>
+                            <div className={`${styles.caseChip} ${styles.cc1}`}><span className={styles.dot}>🛒</span> سبد خرید هوشمند</div>
+                            <div className={`${styles.caseChip} ${styles.cc2}`}><span className={`${styles.dot} ${styles.peach}`}>💳</span> درگاه پرداخت امن</div>
                         </div>
                     </div>
                 </section>
@@ -295,10 +295,10 @@ export default function PortfolioPage() {
                 {/* ===== CTA LINK TO CONTACT ===== */}
                 <section className={styles.ctaLink}>
                     <div className="container">
-                        <Link href="/contact" className={styles.box}>
+                        <Link href="/contactUs" className={styles.box}>
                             <div>
-                                <h3>پروژه بعدی، داستان کسب‌وکار شماست</h3>
-                                <p>اگر ایده‌ای در ذهن دارید، تیم سایمون آماده است تا مثل این نمونه‌کارها، آن را به یک محصول دیجیتال حرفه‌ای تبدیل کند.</p>
+                                <h3>همین حالا پکیج مناسب خود را انتخاب کنید</h3>
+                                <p>اگر می‌خواهید وب‌سایت خود را با یکی از این سه پکیج حرفه‌ای راه‌اندازی کنید، تیم سایمون آماده مشاوره و اجراست.</p>
                             </div>
                             <span className={styles.arrow}>←</span>
                         </Link>
@@ -340,7 +340,7 @@ export default function PortfolioPage() {
                         <h4>ارتباط با ما</h4>
                         <ul className="footer-contact">
                             <li>📍 تهران، خیابان آزادی</li>
-                            <li>📞 ۰۲۱-۱۲۳۴۵۶۷۸</li>
+                            <li>0992 058 7634</li>
                             <li>✉️ info@simon.ir</li>
                         </ul>
                     </div>

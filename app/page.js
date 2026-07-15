@@ -90,13 +90,13 @@ export default function Home() {
         <section>
           <div className="container">
             <div className="stats">
-              <div className="stat-item"><strong>+100</strong><span>پروژه موفق</span></div>
+              <div className="stat-item"><strong>تعهد</strong><span>در زمان تحویل</span></div>
               <div className="stat-sep"></div>
-              <div className="stat-item"><strong>+80</strong><span>برند معتبر کشور</span></div>
+              <div className="stat-item"><strong>رایگان</strong><span>مشاوره اولیه</span></div>
               <div className="stat-sep"></div>
-              <div className="stat-item"><strong>+100</strong><span>مشتری راضی</span></div>
+              <div className="stat-item"><strong>۲۴/۷</strong><span>پشتیبانی</span></div>
               <div className="stat-sep"></div>
-              <div className="stat-item"><strong>+5</strong><span>سال تجربه</span></div>
+              <div className="stat-item"><strong>تضمینی</strong><span>کیفیت و سرعت</span></div>
             </div>
           </div>
         </section>
@@ -107,11 +107,11 @@ export default function Home() {
             <div className="why-head">
               <span className="eyebrow">چرا سایمون؟</span>
               <h2 className="section-title">کسب و کار شما چه نیازی به سایت دارد؟</h2>
-              <p className="section-sub center" style={{marginTop :"14px"}}>سایت، ویترین همیشگی کسب‌وکار شماست؛ جایی که مشتری بدون محدودیت زمان و مکان، ۲۴ ساعته به شما دسترسی دارد و فروش بدون مرز جغرافیایی انجام می‌شود.</p>
+              <p className="section-sub center" style={{ marginTop: "14px" }}>سایت، ویترین همیشگی کسب‌وکار شماست؛ جایی که مشتری بدون محدودیت زمان و مکان، ۲۴ ساعته به شما دسترسی دارد و فروش بدون مرز جغرافیایی انجام می‌شود.</p>
             </div>
             <div className="orbit-wrap">
               <div className="orbit-center">
-                <img src="/icon.jpg" style={{width: "100%", height: '100%' ,borderRadius: '500px'}}/>
+                <img src="/icon.jpg" style={{ width: "100%", height: '100%', borderRadius: '500px' }} />
               </div>
               <div className="why-card"><span className="ic">↗</span><div><h3>بهینه‌سازی سرعت</h3><p>بارگذاری سریع در همه دستگاه‌ها</p></div></div>
               <div className="why-card"><span className="ic">⏱</span><div><h3>دسترسی ۲۴ ساعته</h3><p>همیشه در دسترس مشتریان شما</p></div></div>
@@ -133,13 +133,13 @@ export default function Home() {
                 <span className="service-icon">🏢</span>
                 <h3>سایت شرکتی</h3>
                 <p>تیم سایمون برندها را با خلاقیت و استراتژی‌های به‌روز همراهی می‌کند و هویت دیجیتال حرفه‌ای برایشان می‌سازد.</p>
-                <span className="link">بیشتر بدانید ←</span>
+                <Link href={'/portfolios'} className="link">بیشتر بدانید ←</Link>
               </div>
               <div className="service-card">
                 <span className="service-icon">🛒</span>
                 <h3>سایت فروشگاهی</h3>
                 <p>راه‌اندازی فروشگاه آنلاین امن و کاربردی برای فروش محصولات شما در هر زمان و هر مکان.</p>
-                <span className="link">بیشتر بدانید ←</span>
+                <Link href={'/portfolios'} className="link">بیشتر بدانید ←</Link>
               </div>
             </div>
           </div>
@@ -164,17 +164,17 @@ export default function Home() {
         <section className="showcase">
           <div className="container">
             <div className="showcase-blob">
-              <div className="showcase-badge"><img src="/icon.jpg" style={{width: "100%", height: '100%' ,borderRadius: '100%'}}/></div>
+              <div className="showcase-badge"><img src="/icon.jpg" style={{ width: "100%", height: '100%', borderRadius: '100%' }} /></div>
               <div className="devices">
-                <div className="tablet"><div className="screen"><div className="ph-line" style={{width: '70%'}}></div><div className="ph-block"></div></div></div>
+                <div className="tablet"><div className="screen"><div className="ph-line" style={{ width: '70%' }}></div><div className="ph-block"></div></div></div>
                 <div className="laptop">
                   <div className="screen">
-                    <div className="ph-line" style={{width: '50%'}}></div>
+                    <div className="ph-line" style={{ width: '50%' }}></div>
                     <div className="ph-block"></div>
                   </div>
                   <div className="stand"></div>
                 </div>
-                <div className="phone"><div className="screen"><div className="ph-line" style={{width: '60%'}}></div><div className="ph-block"></div></div></div>
+                <div className="phone"><div className="screen"><div className="ph-line" style={{ width: '60%' }}></div><div className="ph-block"></div></div></div>
               </div>
               <div className="showcase-caption">
                 <h3>خدمات سایمون در همه دستگاه‌ها</h3>
@@ -190,13 +190,13 @@ export default function Home() {
         </section>
 
         {/* <!-- WEBSITE DESIGN STEPS --> */}
-        <section className="why" style={{paddingTop: '20px'}}>
+        <section className="why" style={{ paddingTop: '20px' }}>
           <div className="container">
             <div className="why-head">
               <span className="eyebrow">Website design steps</span>
               <h2 className="section-title">مراحل طراحی سایت</h2>
             </div>
-            <div className="services-grid" style={{gridTemplateColumns: 'repeat(3,1fr'}} >
+            <div className="services-grid" style={{ gridTemplateColumns: 'repeat(3,1fr' }} >
               <div className="service-card">
                 <span className="service-icon">1</span>
                 <h3>ارسال درخواست</h3>
@@ -278,7 +278,7 @@ export default function Home() {
             <div className="about-text">
               <span className="eyebrow">درباره سایمون</span>
               <h2 className="section-title">تیمی که دغدغه‌ی رشد کسب‌وکار شماست</h2>
-              <p className="section-sub" style={{maxWidth: "100%" , marginTop: '16px'}}>سایمون از یک تیم کوچک طراحی وب شروع شد و امروز با ترکیبی از طراحان، توسعه‌دهندگان و کارشناسان تجربه‌ی کاربری، همراه ده‌ها کسب‌وکار در مسیر حضور آنلاین حرفه‌ای است. ما باور داریم هر برند، داستان خودش را دارد؛ به همین دلیل هر پروژه را با استراتژی و طراحی اختصاصی جلو می‌بریم، نه با قالب‌های آماده و تکراری.</p>
+              <p className="section-sub" style={{ maxWidth: "100%", marginTop: '16px' }}>سایمون از یک تیم کوچک طراحی وب شروع شد و امروز با ترکیبی از طراحان، توسعه‌دهندگان و کارشناسان تجربه‌ی کاربری، همراه ده‌ها کسب‌وکار در مسیر حضور آنلاین حرفه‌ای است. ما باور داریم هر برند، داستان خودش را دارد؛ به همین دلیل هر پروژه را با استراتژی و طراحی اختصاصی جلو می‌بریم، نه با قالب‌های آماده و تکراری.</p>
               <ul className="about-list">
                 <li><b>✓</b> تیم داخلی طراحی، توسعه و سئو زیر یک سقف</li>
                 <li><b>✓</b> پشتیبانی فنی مستمر پس از تحویل پروژه</li>
@@ -295,7 +295,7 @@ export default function Home() {
 
         <section className="testi">
           <div className="container">
-            <span className="eyebrow center" style={{display: 'table' , marginInline: 'auto'}}>نظرات مشتریان</span>
+            <span className="eyebrow center" style={{ display: 'table', marginInline: 'auto' }}>نظرات مشتریان</span>
             <h2 className="section-title center">نظرات مشتریان ما</h2>
             <div className="testi-grid">
               <div className="testi-card">
@@ -321,21 +321,21 @@ export default function Home() {
           <div className="container">
             <span className="eyebrow">تماس با ما</span>
             <h2 className="section-title">همین حالا با ما در ارتباط باشید</h2>
-            <p className="section-sub" style={{marginTop: '14px'}}>سوالی درباره پروژه‌تان دارید یا می‌خواهید مشاوره رایگان بگیرید؟ فرم زیر را پر کنید تا کارشناسان سایمون در کوتاه‌ترین زمان با شما تماس بگیرند.</p>
+            <p className="section-sub" style={{ marginTop: '14px' }}>سوالی درباره پروژه‌تان دارید یا می‌خواهید مشاوره رایگان بگیرید؟ فرم زیر را پر کنید تا کارشناسان سایمون در کوتاه‌ترین زمان با شما تماس بگیرند.</p>
             <div className="contact-grid">
               <div className="contact-info">
                 <div className="contact-card">
-                  <span className="ic">📍</span>
+                  <span className="ic">💬</span>
                   <div>
-                    <h4>آدرس دفتر</h4>
-                    <p>تهران، خیابان آزادی، برج سایمون، طبقه ۴</p>
+                    <h4>ارتباط آنلاین</h4>
+                    <p>پاسخگویی ۲۴ ساعته از طریق تلگرام ، بله و . . .</p>
                   </div>
                 </div>
                 <div className="contact-card">
                   <span className="ic">📞</span>
                   <div>
                     <h4>شماره تماس</h4>
-                    <p>۰۲۱-۱۲۳۴۵۶۷۸ (شنبه تا چهارشنبه، ۹ تا ۱۸)</p>
+                    <p dir="ltr">0992 058 7634</p>
                   </div>
                 </div>
                 <div className="contact-card">
@@ -345,9 +345,9 @@ export default function Home() {
                     <p>info@simon.ir</p>
                   </div>
                 </div>
-                <div className="contact-map">نقشه موقعیت دفتر سایمون</div>
+                {/* <div className="contact-map">نقشه موقعیت دفتر سایمون</div> */}
               </div>
-              <form className="contact-form">
+              {/* <form className="contact-form">
                 <h3>فرم درخواست مشاوره</h3>
                 <p>اطلاعات‌تان را وارد کنید؛ ظرف کمتر از ۲۴ ساعت پاسخگوی شما هستیم.</p>
                 <div className="form-row">
@@ -369,7 +369,7 @@ export default function Home() {
                   <textarea id="message" placeholder="کمی درباره کسب‌وکار و نیازتان بنویسید..."></textarea>
                 </div>
                 <button type="submit" className="btn btn-primary">ارسال درخواست</button>
-              </form>
+              </form> */}
             </div>
           </div>
         </section>
@@ -378,7 +378,7 @@ export default function Home() {
           <div className="container">
             <span className="eyebrow">وبلاگ سایمون</span>
             <h2 className="section-title">آخرین مقالات</h2>
-            <p className="section-sub" style={{marginTop: '14px'}}>نکات و تجربه‌های تیم سایمون درباره طراحی سایت، برندینگ و رشد کسب‌وکار آنلاین.</p>
+            <p className="section-sub" style={{ marginTop: '14px' }}>نکات و تجربه‌های تیم سایمون درباره طراحی سایت، برندینگ و رشد کسب‌وکار آنلاین.</p>
             <div className="articles-grid">
               <div className="article-card">
                 <div className="article-cover">

@@ -96,7 +96,7 @@ export default function ServicesPage() {
                                     <li><b>✓</b> بهینه‌سازی سرعت و سئو پایه</li>
                                     <li><b>✓</b> پنل مدیریت محتوای آسان</li>
                                 </ul>
-                                <span className="link">بیشتر بدانید ←</span>
+                                {/* <span className="link">بیشتر بدانید ←</span> */}
                             </div>
 
                             {/* 2 */}
@@ -109,20 +109,20 @@ export default function ServicesPage() {
                                     <li><b>✓</b> مدیریت انبار و موجودی کالا</li>
                                     <li><b>✓</b> تجربه خرید سریع و مطمئن</li>
                                 </ul>
-                                <span className="link">بیشتر بدانید ←</span>
+                                {/* <span className="link">بیشتر بدانید ←</span> */}
                             </div>
 
                             {/* 3 */}
                             <div className={styles.serviceDetailCard}>
-                                <span className="service-icon">📱</span>
-                                <h3>اپلیکیشن موبایل</h3>
-                                <p>طراحی و توسعه اپلیکیشن اندروید و iOS برای دسترسی راحت‌تر مشتریان.</p>
+                                <span className="service-icon">💻</span>
+                                <h3>طراحی وب‌سایت اختصاصی</h3>
+                                <p>از طراحی تا پیاده‌سازی کامل وب‌سایت‌های شرکتی، شخصی و فروشگاهی با جدیدترین تکنولوژی‌ها.</p>
                                 <ul className={styles.serviceFeats}>
-                                    <li><b>✓</b> رابط کاربری ساده و روان</li>
-                                    <li><b>✓</b> اعلان‌ها و ارتباط مستقیم با کاربر</li>
-                                    <li><b>✓</b> هماهنگی کامل با نسخه وب</li>
+                                    <li><b>✓</b> طراحی کاملاً سفارشی و منحصربه‌فرد</li>
+                                    <li><b>✓</b> بهینه‌سازی برای موتورهای جستجو (سئو)</li>
+                                    <li><b>✓</b> ریسپانسیو و سازگار با تمام دستگاه‌ها</li>
                                 </ul>
-                                <span className="link">بیشتر بدانید ←</span>
+                                {/* <span className="link">مشاهده پکیج‌ها ←</span> */}
                             </div>
 
                             {/* 4 */}
@@ -135,7 +135,7 @@ export default function ServicesPage() {
                                     <li><b>✓</b> راهنمای هویت بصری برند</li>
                                     <li><b>✓</b> طراحی محتوای شبکه‌های اجتماعی</li>
                                 </ul>
-                                <span className="link">بیشتر بدانید ←</span>
+                                {/* <span className="link">بیشتر بدانید ←</span> */}
                             </div>
 
                             {/* 5 */}
@@ -148,7 +148,7 @@ export default function ServicesPage() {
                                     <li><b>✓</b> فرم‌ها و مسیر خرید بهینه</li>
                                     <li><b>✓</b> تحویل سریع در کمترین زمان</li>
                                 </ul>
-                                <span className="link">بیشتر بدانید ←</span>
+                                {/* <span className="link">بیشتر بدانید ←</span> */}
                             </div>
 
                             {/* 6 */}
@@ -161,7 +161,7 @@ export default function ServicesPage() {
                                     <li><b>✓</b> گزارش ماهانه عملکرد سایت</li>
                                     <li><b>✓</b> پشتیبانی و رفع مشکلات فنی</li>
                                 </ul>
-                                <span className="link">بیشتر بدانید ←</span>
+                                {/* <span className="link">بیشتر بدانید ←</span> */}
                             </div>
                         </div>
                     </div>
