@@ -55,7 +55,7 @@ export default function Home() {
             </div>
             <div className="hero-art">
               <div className="hero-blob"></div>
-              <div className="hero-orange-dot">🚀</div>
+              <div className="hero-orange-dot"><img src="/Group 25 (1).svg" style={{width: "60%" ,borderRadius: '9px'}}/></div>
               <div className="device-frame">
                 <div className="bar"><i></i><i></i><i></i></div>
                 <div className="body">
@@ -111,7 +111,7 @@ export default function Home() {
             </div>
             <div className="orbit-wrap">
               <div className="orbit-center">
-                <img src="/icon.jpg" style={{width: "100%", height: '100%' ,borderRadius: '500px'}}/>
+                <img src="/Group 25 (1).svg" style={{width: "60%" ,borderRadius: '9px'}}/>
               </div>
               <div className="why-card"><span className="ic">↗</span><div><h3>بهینه‌سازی سرعت</h3><p>بارگذاری سریع در همه دستگاه‌ها</p></div></div>
               <div className="why-card"><span className="ic">⏱</span><div><h3>دسترسی ۲۴ ساعته</h3><p>همیشه در دسترس مشتریان شما</p></div></div>
@@ -164,7 +164,7 @@ export default function Home() {
         <section className="showcase">
           <div className="container">
             <div className="showcase-blob">
-              <div className="showcase-badge"><img src="/icon.jpg" style={{width: "100%", height: '100%' ,borderRadius: '100%'}}/></div>
+              <div className="showcase-badge">    <img src="/Group 25.svg" style={{width: "60%" ,borderRadius: '9px'}}/></div>
               <div className="devices">
                 <div className="tablet"><div className="screen"><div className="ph-line" style={{width: '70%'}}></div><div className="ph-block"></div></div></div>
                 <div className="laptop">
@@ -328,86 +328,29 @@ export default function Home() {
                   <span className="ic">📍</span>
                   <div>
                     <h4>آدرس دفتر</h4>
-                    <p>تهران، خیابان آزادی، برج سایمون، طبقه ۴</p>
+                    <p>تبریز</p>
                   </div>
                 </div>
                 <div className="contact-card">
                   <span className="ic">📞</span>
                   <div>
                     <h4>شماره تماس</h4>
-                    <p>۰۲۱-۱۲۳۴۵۶۷۸ (شنبه تا چهارشنبه، ۹ تا ۱۸)</p>
+                    <p>۰۹۳۹۲۱۷۱۳۶۶</p>
                   </div>
                 </div>
                 <div className="contact-card">
                   <span className="ic">✉️</span>
                   <div>
                     <h4>ایمیل</h4>
-                    <p>info@simon.ir</p>
+                    <p>simonwebdevups@gmail.com</p>
                   </div>
                 </div>
                 <div className="contact-map">نقشه موقعیت دفتر سایمون</div>
               </div>
-              <form className="contact-form">
-                <h3>فرم درخواست مشاوره</h3>
-                <p>اطلاعات‌تان را وارد کنید؛ ظرف کمتر از ۲۴ ساعت پاسخگوی شما هستیم.</p>
-                <div className="form-row">
-                  <div className="form-group">
-                    <label for="fullname">نام و نام‌خانوادگی</label>
-                    <input type="text" id="fullname" placeholder="مثلاً علیرضا احمدی" />
-                  </div>
-                  <div className="form-group">
-                    <label for="phone">شماره تماس</label>
-                    <input type="tel" id="phone" placeholder="۰۹۱۲xxxxxxx" />
-                  </div>
-                </div>
-                <div className="form-group">
-                  <label for="email">ایمیل</label>
-                  <input type="email" id="email" placeholder="you@email.com" />
-                </div>
-                <div className="form-group">
-                  <label for="message">توضیح پروژه</label>
-                  <textarea id="message" placeholder="کمی درباره کسب‌وکار و نیازتان بنویسید..."></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary">ارسال درخواست</button>
-              </form>
+
             </div>
           </div>
         </section>
-
-        <section className="articles" id="articles">
-          <div className="container">
-            <span className="eyebrow">وبلاگ سایمون</span>
-            <h2 className="section-title">آخرین مقالات</h2>
-            <p className="section-sub" style={{marginTop: '14px'}}>نکات و تجربه‌های تیم سایمون درباره طراحی سایت، برندینگ و رشد کسب‌وکار آنلاین.</p>
-            <div className="articles-grid">
-              <div className="article-card">
-                <div className="article-cover">
-                  <span className="article-tag">طراحی سایت</span>
-                  📝
-                </div>
-                <div className="article-body">
-                  <div className="article-meta"><span>۱۲ تیر ۱۴۰۴</span><span className="dot-sep"></span><span>۵ دقیقه مطالعه</span></div>
-                  <h3>۷ اصل طراحی سایتی که مشتری را به خرید ترغیب می‌کند</h3>
-                  <p>بررسی اصولی که باعث می‌شود بازدیدکننده سایت شما، به مشتری واقعی تبدیل شود.</p>
-                  <span className="article-link">ادامه مطلب ←</span>
-                </div>
-              </div>
-              <div className="article-card">
-                <div className="article-cover">
-                  <span className="article-tag">سئو</span>
-                  📈
-                </div>
-                <div className="article-body">
-                  <div className="article-meta"><span>۳ تیر ۱۴۰۴</span><span className="dot-sep"></span><span>۷ دقیقه مطالعه</span></div>
-                  <h3>راهنمای سئو برای کسب‌وکارهای کوچک در سال جدید</h3>
-                  <p>ساده‌ترین راه‌ها برای بهبود رتبه سایت شما در نتایج جست‌وجوی گوگل.</p>
-                  <span className="article-link">ادامه مطلب ←</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
       </main>
 
       {/* <footer>

@@ -143,10 +143,10 @@ nav ul a.active{ color: var(--blue); }
 .logo{ display:flex; align-items:center; gap:10px; font-weight:800; font-size:1.25rem; }
 .logo-mark{
   width:38px; height:38px; border-radius:11px;
-  background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+  /* background: linear-gradient(135deg, var(--blue), var(--blue-dark)); */
   display:flex; align-items:center; justify-content:center;
   color:#fff; font-weight:900; font-size:1.1rem;
-  box-shadow: 0 8px 18px -8px rgba(43,99,224,.7);
+  /* box-shadow: 0 8px 18px -8px rgba(43,99,224,.7); */
 }
 .logo span.brand-en{ color: var(--ink-soft); font-weight:500; font-size:.8rem; margin-right:2px;}
 
@@ -515,12 +515,13 @@ nav ul a.active{ color: var(--blue); }
   .hero{ padding:52px 0 28px; text-align:center; }
   .hero p{ margin-inline:auto; }
   .hero-actions{ justify-content:center; }
+  .hero-blob{display: none;}
   .hero-art{ max-width:300px; }
-  .hero-card{ padding:10px 14px; font-size:.78rem; gap:8px; border-radius:14px; }
+  .hero-card{display: none;}
   .hero-card .dot{ width:30px; height:30px; }
   .hc1{ top:2%; right:2%; }
   .hc2{ bottom:2%; left:2%; }
-  .hero-orange-dot{ width:86px; height:86px; font-size:1.6rem; top:-12px; left:-10px; }
+  .hero-orange-dot{display: none; }
   .stats{ padding:30px 6%; border-radius:24px; gap:16px; justify-content:center; }
   .stat-item{ min-width:42%; }
   .stat-sep{ display:none; }

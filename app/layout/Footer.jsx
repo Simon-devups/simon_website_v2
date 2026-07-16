@@ -24,18 +24,18 @@ export default function Footer() {
             کسب‌وکار شما را وارد دنیای دیجیتال ماندگار و تاثیرگذار می‌کند.
           </p>
           <div className="footer-social">
-            <Link href="#">in</Link>
-            <Link href="#">ig</Link>
-            <Link href="#">tw</Link>
-            <Link href="#">tg</Link>
+            <Link href="#"><img src="/Group 95.png" style={{width: "50%" }}/></Link>
+            <Link href="#"><img src="/Group (3).svg" style={{width: "50%" }}/></Link>
+            <Link href="#"><img src="/Vector (1).png" style={{width: "50%" }}/></Link>
+            <Link href="#"><img src="/Vector (7).svg" style={{width: "50%" }}/></Link>
           </div>
         </div>
         <div className="footer-col">
           <h4>خدمات ما</h4>
           <ul>
-            <li><Link href="/services">طراحی سایت</Link></li>
-            <li><Link href="/services">طراحی محصول</Link></li>
-            <li><Link href="/services">سئو</Link></li>
+            <li><Link href="/services">طراحی سایت شخصی</Link></li>
+            <li><Link href="/services">طراحی سایت شرکتی</Link></li>
+            <li><Link href="/services">طراحی سایت فروشگاهی</Link></li>
           </ul>
         </div>
         <div className="footer-col">
@@ -43,16 +43,16 @@ export default function Footer() {
           <ul>
             <li><Link href="/">صفحه اصلی</Link></li>
             <li><Link href="/about">درباره ما</Link></li>
-            <li><Link href="#">سوالات متداول</Link></li>
+            <li><Link href="#"> خدمات ما</Link></li>
             <li><Link href="/contact">تماس با ما</Link></li>
           </ul>
         </div>
         <div className="footer-col">
           <h4>ارتباط با ما</h4>
           <ul className="footer-contact">
-            <li>📍 تهران، خیابان آزادی</li>
-            <li>📞 ۰۲۱-۱۲۳۴۵۶۷۸</li>
-            <li>✉️ info@simon.ir</li>
+            <li>تبریز</li>
+            <li>۰۹۳۹۲۱۷۱۳۶۶</li>
+            <li>simonwebdevups@gmail.com</li>
           </ul>
         </div>
       </div>

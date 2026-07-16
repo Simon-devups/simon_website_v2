@@ -66,7 +66,7 @@ export default function ServicesPage() {
                             <em style={{ color: "var(--blue)" }}>آنلاین و حرفه‌ای</em> می‌کند
                         </h1>
                         <p className="section-sub center" style={{ marginTop: "18px" }}>
-                            از سایت شرکتی و فروشگاه اینترنتی تا برندینگ و اپلیکیشن؛ تیم سایمون هر بخش از حضور دیجیتال
+                            از سایت شرکتی تا فروشگاه اینترنتی؛ تیم سایمون هر بخش از حضور دیجیتال
                             کسب‌وکار شما را با استراتژی، طراحی و توسعه‌ی اختصاصی می‌سازد.
                         </p>
                         <div className={styles.breadcrumb}>
@@ -205,38 +205,38 @@ export default function ServicesPage() {
                         <div className={styles.pricingGrid}>
                             {/* Basic */}
                             <div className={styles.priceCard}>
-                                <h3>پایه</h3>
-                                <div className={styles.amount}>۱۲ <span>میلیون تومان از</span></div>
+                                <h3>شرکتی</h3>
+                                <div className={styles.amount}>۱۴ <span>میلیون تومان از</span></div>
                                 <ul className={styles.priceFeats}>
                                     <li><b>✓</b> سایت شرکتی تا ۵ صفحه</li>
                                     <li><b>✓</b> طراحی واکنش‌گرا</li>
                                     <li><b>✓</b> سئوی پایه</li>
                                 </ul>
-                                <Link href="/#contact" className="btn btn-ghost">شروع همکاری</Link>
+                                <Link href="/#contact" className="btn btn-ghost">درخواست مشاوره</Link>
                             </div>
 
                             {/* Featured */}
                             <div className={`${styles.priceCard} ${styles.featured}`}>
                                 <span className={styles.priceBadge}>پیشنهاد سایمون</span>
-                                <h3>کسب‌وکار</h3>
-                                <div className={styles.amount}>۲۸ <span>میلیون تومان از</span></div>
+                                <h3>فروشگاهی</h3>
+                                <div className={styles.amount}>۲۴ <span>میلیون تومان از</span></div>
                                 <ul className={styles.priceFeats}>
                                     <li><b>✓</b> سایت فروشگاهی کامل</li>
                                     <li><b>✓</b> درگاه پرداخت و مدیریت سفارش</li>
                                     <li><b>✓</b> سئوی فنی و محتوایی</li>
                                     <li><b>✓</b> سه ماه پشتیبانی رایگان</li>
                                 </ul>
-                                <Link href="/#contact" className="btn btn-primary">شروع همکاری</Link>
+                                <Link href="/#contact" className="btn btn-primary">درخواست مشاوره</Link>
                             </div>
 
                             {/* Enterprise */}
                             <div className={styles.priceCard}>
-                                <h3>سازمانی</h3>
-                                <div className={styles.amount}>تماس <span>بگیرید</span></div>
+                                <h3>شخصی</h3>
+                                <div className={styles.amount}>۸ <span>میلیون تومان از</span></div>
                                 <ul className={styles.priceFeats}>
-                                    <li><b>✓</b> اپلیکیشن + وب‌سایت اختصاصی</li>
+                                    <li><b>✓</b> وب‌سایت اختصاصی</li>
                                     <li><b>✓</b> برندینگ کامل</li>
-                                    <li><b>✓</b> پشتیبانی و سئوی مستمر</li>
+                                    <li><b>✓</b> پشتیبانی مستمر</li>
                                 </ul>
                                 <Link href="/#contact" className="btn btn-ghost">درخواست مشاوره</Link>
                             </div>
