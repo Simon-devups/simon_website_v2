@@ -28,18 +28,18 @@ export default function Footer() {
             کسب‌وکار شما را وارد دنیای دیجیتال ماندگار و تاثیرگذار می‌کند.
           </p>
           <div className="footer-social">
-            <Link href="#">in</Link>
-            <Link href="#">ig</Link>
-            <Link href="#">tw</Link>
-            <Link href="#">tg</Link>
+            <Link href="#"><img src="/Group 95.png" style={{width: "50%" }}/></Link>
+            <Link href="#"><img src="/Group (3).svg" style={{width: "50%" }}/></Link>
+            <Link href="#"><img src="/Vector (1).png" style={{width: "50%" }}/></Link>
+            <Link href="#"><img src="/Vector (7).svg" style={{width: "50%" }}/></Link>
           </div>
         </div>
         <div className="footer-col">
           <h4>خدمات ما</h4>
           <ul>
-            <li><Link href="/khadamat">طراحی سایت</Link></li>
-            <li><Link href="/khadamat">طراحی محصول</Link></li>
-            <li><Link href="/khadamat">سئو</Link></li>
+            <li><Link href="/khadamat">طراحی سایت شخصی</Link></li>
+            <li><Link href="/khadamat">طراحی سایت شرکتی</Link></li>
+            <li><Link href="/khadamat">طراحی سایت فروشگاهی</Link></li>
           </ul>
         </div>
         <div className="footer-col">

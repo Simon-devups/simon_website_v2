@@ -43,7 +43,7 @@ export default function Header() {
         {/* لوگو */}
         <Link href="/" className="logo">
           <span className="logo-mark">
-            <img src="/icon.jpg" style={{width: "100%", height: '100%' ,borderRadius: '9px'}}/>
+            <img src="/Group 25.svg" style={{width: "100%", height: '100%' ,borderRadius: '9px'}}/>
           </span>
           سایمون
         </Link>

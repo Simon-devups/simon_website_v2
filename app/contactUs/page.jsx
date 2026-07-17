@@ -67,7 +67,7 @@ export default function ContactPage() {
                                 ما همیشه آماده شنیدن نظرات، پیشنهادات و سوالات شما هستیم. اگر به راهنمایی نیاز دارید، درخواست همکاری دارید یا هر گونه پرسشی برایتان پیش آمده، می‌توانید از طریق فرم تماس، ایمیل یا شماره‌های درج‌شده با ما در ارتباط باشید. تیم ما در سریع‌ترین زمان ممکن پاسخگوی شما خواهد بود.
                             </p>
                             <div className={styles.heroActions}>
-                                <a href="tel:+982112345678" className="btn btn-primary">📞 تماس با موبایل</a>
+                                <a href="tel:0939217166" className="btn btn-primary"> تماس با ما </a>
                                 <a href="#form" className="btn btn-ghost">ارسال پیام</a>
                             </div>
                         </div>
@@ -82,10 +82,10 @@ export default function ContactPage() {
                                 <span className={styles.dot}>📱</span> پاسخگویی سریع
                             </div>
                             <div className={`${styles.floatCard} ${styles.fc2}`}>
-                                <span className={styles.dot}>📍</span> تهران، ایران
+                                <span className={styles.dot}>📍</span> تبریز، ایران
                             </div>
                             <div className={`${styles.floatCard} ${styles.fc3}`}>
-                                <span className={styles.dot}>⏱</span> شنبه تا پنجشنبه
+                                <span className={styles.dot}>⏱</span> شنبه تا جمعه
                             </div>
                         </div>
                     </div>
@@ -98,25 +98,20 @@ export default function ContactPage() {
                             <div className={styles.infoCard}>
                                 <span className={styles.infoIcon}>📱</span>
                                 <h3>تلفن همراه</h3>
-                                <span className={styles.val}>0912 345 6789+</span>
+                                <span className={styles.val}>0939217166</span>
                                 <a href="tel:+989123456789" className={styles.miniBtn}>تماس بگیرید</a>
                             </div>
-                            <div className={styles.infoCard}>
-                                <span className={styles.infoIcon}>☎️</span>
-                                <h3>تلفن ثابت</h3>
-                                <span className={styles.val}>021 - 1234 5678+</span>
-                                <a href="tel:+982112345678" className={styles.miniBtn}>تماس بگیرید</a>
-                            </div>
+
                             <div className={styles.infoCard}>
                                 <span className={styles.infoIcon}>✉️</span>
                                 <h3>ایمیل</h3>
-                                <span className={styles.val}>info@simon.ir</span>
+                                <span className={styles.val}>simonwebdevups@gmail.com</span>
                                 <a href="mailto:info@simon.ir" className={styles.miniBtn}>ارسال ایمیل</a>
                             </div>
                             <div className={styles.infoCard}>
                                 <span className={styles.infoIcon}>📍</span>
                                 <h3>آدرس دفتر</h3>
-                                <span className={`${styles.val} ${styles.rtl}`}>تهران، خیابان آزادی</span>
+                                <span className={`${styles.val} ${styles.rtl}`}>تبریز</span>
                                 <a href="#" className={styles.miniBtn}>مسیریابی</a>
                             </div>
                         </div>
@@ -124,70 +119,7 @@ export default function ContactPage() {
                 </section>
 
                 {/* ===== FORM + SIDE PANEL ===== */}
-                <section className={styles.contactMain} id="form">
-                    <div className={`container ${styles.mainGrid}`}>
-                        <div className={styles.formCard}>
-                            <h2>فرم تماس با ما</h2>
-                            <p className={styles.sub}>فرم زیر را پر کنید؛ تیم سایمون در سریع‌ترین زمان ممکن با شما تماس خواهد گرفت.</p>
-                            <form onSubmit={(e) => e.preventDefault()}>
-                                <div className={styles.formRow}>
-                                    <div className={styles.field}>
-                                        <label>نام و نام خانوادگی</label>
-                                        <input type="text" placeholder="مثلاً علیرضا احمدی" />
-                                    </div>
-                                    <div className={styles.field}>
-                                        <label>شماره تماس</label>
-                                        <input type="tel" placeholder="09XX XXX XXXX" />
-                                    </div>
-                                </div>
-                                <div className={styles.formRow}>
-                                    <div className={`${styles.field} ${styles.full}`}>
-                                        <label>ایمیل</label>
-                                        <input type="email" placeholder="you@example.com" />
-                                    </div>
-                                </div>
-                                <div className={styles.formRow}>
-                                    <div className={`${styles.field} ${styles.full}`}>
-                                        <label>موضوع</label>
-                                        <input type="text" placeholder="مثلاً درخواست همکاری، مشاوره طراحی سایت و..." />
-                                    </div>
-                                </div>
-                                <div className={styles.formRow}>
-                                    <div className={`${styles.field} ${styles.full}`}>
-                                        <label>پیام شما</label>
-                                        <textarea rows="5" placeholder="پیام خود را اینجا بنویسید..."></textarea>
-                                    </div>
-                                </div>
-                                <button type="submit" className={`btn btn-primary ${styles.btnBlock}`}>ارسال پیام</button>
-                            </form>
-                        </div>
 
-                        <div className={styles.sidePanel}>
-                            <h3>راه‌های ارتباطی سریع</h3>
-                            <div className={styles.sideItem}>
-                                <span className={styles.ic}>📱</span>
-                                <div><strong>تلفن همراه</strong><span>0912 345 6789+</span></div>
-                            </div>
-                            <div className={styles.sideItem}>
-                                <span className={styles.ic}>☎️</span>
-                                <div><strong>تلفن ثابت</strong><span>021 - 1234 5678+</span></div>
-                            </div>
-                            <div className={styles.sideItem}>
-                                <span className={styles.ic}>✉️</span>
-                                <div><strong>ایمیل</strong><span>info@simon.ir</span></div>
-                            </div>
-                            <div className={styles.sideItem}>
-                                <span className={styles.ic}>📍</span>
-                                <div><strong>آدرس</strong><span className={styles.rtl}>تهران، خیابان آزادی، ساختمان سایمون</span></div>
-                            </div>
-                            <div className={styles.sideItem}>
-                                <span className={styles.ic}>⏱</span>
-                                <div><strong>ساعات پاسخگویی</strong><span className={styles.rtl}>شنبه تا پنجشنبه، ۹ الی ۱۸</span></div>
-                            </div>
-                            <div className={styles.sideMap}>نقشه موقعیت دفتر سایمون</div>
-                        </div>
-                    </div>
-                </section>
 
                 {/* ===== SOCIAL BAND ===== */}
                 <section className={styles.socialBandWrap}>
@@ -197,11 +129,13 @@ export default function ContactPage() {
                             <h3>ما را در شبکه‌های اجتماعی دنبال کنید</h3>
                             <p>برای دیدن آخرین پروژه‌ها، اخبار و پیشنهادهای ویژه سایمون، در شبکه‌های اجتماعی همراه ما باشید.</p>
                             <div className={styles.socialIcons}>
-                                <a href="#" aria-label="اینستاگرام">📷</a>
-                                <a href="#" aria-label="تلگرام">✈️</a>
-                                <a href="#" aria-label="واتساپ">💬</a>
-                                <a href="#" aria-label="لینکدین">in</a>
-                                <a href="#" aria-label="توییتر">🐦</a>
+                                <a href="#" aria-label="توییتر"><img src="/Vector (6).svg" style={{width: "25%" }}/></a>  
+                                <a href="#" aria-label="لینکدین"><img src="/Vector (7).svg" style={{width: "50%" }}/></a>                                                              
+                                <a href="#" aria-label="اینستاگرام"><img src="/Group 95.png" style={{width: "50%" }}/></a>
+                                <a href="#" aria-label="تلگرام"><img src="/Group (3).svg" style={{width: "50%" }}/></a>
+                                <a href="#" aria-label="واتساپ"><img src="/Vector (1).png" style={{width: "50%" }}/></a>
+
+
                             </div>
                         </div>
                     </div>

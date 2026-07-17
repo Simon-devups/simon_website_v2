@@ -55,7 +55,7 @@ export default function Home() {
             </div>
             <div className="hero-art">
               <div className="hero-blob"></div>
-              <div className="hero-orange-dot">🚀</div>
+              <div className="hero-orange-dot"><img src="/Group 25 (1).svg" style={{width: "60%" ,borderRadius: '9px'}}/></div>
               <div className="device-frame">
                 <div className="bar"><i></i><i></i><i></i></div>
                 <div className="body">
@@ -164,7 +164,7 @@ export default function Home() {
         <section className="showcase">
           <div className="container">
             <div className="showcase-blob">
-              <div className="showcase-badge"><img src="/icon.jpg" style={{ width: "100%", height: '100%', borderRadius: '100%' }} /></div>
+              <div className="showcase-badge">    <img src="/Group 25.svg" style={{width: "60%" ,borderRadius: '9px'}}/></div>
               <div className="devices">
                 <div className="tablet"><div className="screen"><div className="ph-line" style={{ width: '70%' }}></div><div className="ph-block"></div></div></div>
                 <div className="laptop">
@@ -342,7 +342,7 @@ export default function Home() {
                   <span className="ic">✉️</span>
                   <div>
                     <h4>ایمیل</h4>
-                    <p>info@simon.ir</p>
+                    <p>simonwebdevups@gmail.com</p>
                   </div>
                 </div>
                 {/* <div className="contact-map">نقشه موقعیت دفتر سایمون</div> */}
