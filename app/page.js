@@ -55,7 +55,7 @@ export default function Home() {
             </div>
             <div className="hero-art">
               <div className="hero-blob"></div>
-              <div className="hero-orange-dot"><img src="/Group 25 (1).svg" style={{width: "60%" ,borderRadius: '9px'}}/></div>
+              <div className="hero-orange-dot"><img src="/Group 25 (1).svg" style={{ width: "60%", borderRadius: '9px' }} /></div>
               <div className="device-frame">
                 <div className="bar"><i></i><i></i><i></i></div>
                 <div className="body">
@@ -164,7 +164,7 @@ export default function Home() {
         <section className="showcase">
           <div className="container">
             <div className="showcase-blob">
-              <div className="showcase-badge">    <img src="/Group 25.svg" style={{width: "60%" ,borderRadius: '9px'}}/></div>
+              <div className="showcase-badge">    <img src="/Group 25.svg" style={{ width: "60%", borderRadius: '9px' }} /></div>
               <div className="devices">
                 <div className="tablet"><div className="screen"><div className="ph-line" style={{ width: '70%' }}></div><div className="ph-block"></div></div></div>
                 <div className="laptop">
@@ -284,7 +284,7 @@ export default function Home() {
                 <li><b>✓</b> پشتیبانی فنی مستمر پس از تحویل پروژه</li>
                 <li><b>✓</b> رعایت زمان‌بندی و شفافیت کامل در قرارداد</li>
               </ul>
-              
+
             </div>
           </div>
         </section>
@@ -331,7 +331,9 @@ export default function Home() {
                   <span className="ic">📞</span>
                   <div>
                     <h4>شماره تماس</h4>
-                    <p dir="ltr">0930 128 8166</p>
+                    <a href="tel:+989301288166" dir="ltr" style={{ color: 'inherit', textDecoration: 'none' }}>
+                      0930 128 8166
+                    </a>
                   </div>
                 </div>
                 <div className="contact-card">
@@ -373,9 +375,9 @@ export default function Home() {
         <section className="articles" id="articles">
           <div className="container">
             <span className="eyebrow">وبلاگ سایمون</span>
-            <div style={{display: 'flex' , justifyContent: 'space-between'}}>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <h2 className="section-title">آخرین مقالات</h2>
-              <Link href={"/articles"} style={{padding: '.5rem 2rem', borderRadius: '10rem' , backgroundColor: '#f3f6fe' , color: '#2b63e0', border: '1px solid #2b63e0' , fontWeight: '600' , fontSize: '1.1rem' }}>مقالات بیشتر <span ></span>←</Link>
+              <Link href={"/articles"} style={{ padding: '.5rem 2rem', borderRadius: '10rem', backgroundColor: '#f3f6fe', color: '#2b63e0', border: '1px solid #2b63e0', fontWeight: '600', fontSize: '1.1rem' }}>مقالات بیشتر <span ></span>←</Link>
             </div>
             <p className="section-sub" style={{ marginTop: '14px' }}>نکات و تجربه‌های تیم سایمون درباره طراحی سایت، برندینگ و رشد کسب‌وکار آنلاین.</p>
             <div className="articles-grid">

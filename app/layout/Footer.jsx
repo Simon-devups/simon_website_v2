@@ -28,9 +28,11 @@ export default function Footer() {
             کسب‌وکار شما را وارد دنیای دیجیتال ماندگار و تاثیرگذار می‌کند.
           </p>
           <div className="footer-social">
-            <Link href="#"><img src="/Group 95.png" style={{width: "50%" }}/></Link>
-            <Link href="#"><img src="/Group (3).svg" style={{width: "50%" }}/></Link>
-            <Link href="#"><img src="/Vector (1).png" style={{width: "50%" }}/></Link>
+            <Link href="https://ble.ir/simondevs"><img src="/bale.png" style={{width: "50%" }}/></Link>
+            <Link href="https://instagram.com/simon.devs"><img src="/Group (3).svg" style={{width: "50%" }}/></Link>
+            <Link href="https://rubika.ir/simondevs"><img src="/Vector (1).png" style={{width: "50%" }}/></Link>
+            <Link href="https://wa.me/989920587634"><img src="/Group 95.png" style={{width: "50%" }}/></Link>
+
             {/* <Link href="#"><img src="/bale.jfif" style={{width: "50%" , backgroundBlendMode: 'screen'}}/></Link> */}
           </div>
         </div>
