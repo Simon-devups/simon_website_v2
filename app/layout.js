@@ -18,8 +18,8 @@ const vazirmatn = Vazirmatn({
 
 
 export const metadata = {
-  title: "Simon",
-  description: "Simon website",
+  title: ' تیم سایمون | Simon Team',
+  description: 'سایمون یک تیم متخصص در طراحی سایت و هویت دیجیتال است؛ از قالب اختصاصی تا فروشگاه آنلاین، همه‌چیز را برایتان می‌سازیم تا کسب‌وکارتان همیشه در دسترس مشتری باشد.'
 };
 
 

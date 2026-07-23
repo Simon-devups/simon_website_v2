@@ -5,351 +5,292 @@ import { useState } from "react";
 import Link from "next/link";
 import styles from "./portfolio.module.css";
 
+// داده‌های پروژه‌ها (تصاویر در پوشه public/assets قرار دارند)
+const projectsData = [
+    {
+        id: "arian",
+        index: "۰۱",
+        client: "گروه بازرگانی آرین",
+        category: "حمل‌ونقل و بازرگانی بین‌المللی",
+        title: "وب‌سایتی که اعتبار یک شرکت تجاری بین‌المللی را در نگاه اول نشان می‌دهد",
+        description:
+            "گروه بازرگانی آرین در حوزه حمل‌ونقل دریایی، هوایی و زمینی و ترخیص کالا با بیش از یک دهه سابقه فعالیت می‌کند، اما وب‌سایت قدیمی‌شان نه اعتبار شرکت را منتقل می‌کرد و نه اطلاعات کافی برای مشتریان تازه ارائه می‌داد. سایمون با طراحی وب‌سایتی حرفه‌ای بر پایه تصاویر از کشتی‌ها و بنادر، هویت بصری سرمه‌ای و طلایی شرکت را در قالبی مدرن و قابل‌اعتماد بازتعریف کرد.",
+        challenge:
+            "ایجاد هویت بصری برای یک شرکت و هولدینگ با برندی به یاد ماندنی.",
+        solution:
+            "هیرویی تاثیرگذار با عکس از عملیات دریایی، معرفی دفاتر ایران، امارات و چین، و بخش «چرا آرین را انتخاب کنید» برای جلب اعتماد.",
+        stats: [
+            { label: "صفحه اصلی طراحی‌شده", value: "۵" },
+            { label: "دفتر بین‌المللی معرفی‌شده", value: "۳" },
+            { label: "ریسپانسیو موبایل", value: "۱۰۰٪" },
+        ],
+        tags: ["طراحی اختصاصی هیرو", "فرم استعلام قیمت", "معرفی تیم و فرآیند کار", "سوالات متداول"],
+        images: [
+            { src: "/portfolio1/aryan1.png", alt: "صفحه اصلی گروه بازرگانی آرین", label: "صفحه اصلی" },
+            { src: "/portfolio1/aryan2.png", alt: "بخش درباره ما آرین", label: "درباره ما" },
+            { src: "/portfolio1/aryan3.png", alt: "بخش چرا آرین را انتخاب کنید", label: "چرا ما" },
+            { src: "/portfolio1/aryan4.png", alt: "بخش تماس با ما آرین", label: "تماس با ما" },
+        ],
+    },
+    {
+        id: "deedar",
+        index: "۰۲",
+        client: "استودیو دیدار",
+        category: "معماری و دکوراسیون داخلی",
+        title: "وب‌سایتی که مثل یک نمایشگاه معماری، فضاها را به تصویر می‌کشد",
+        description:
+            "دیدار، استودیوی معماری و دکوراسیون داخلی با رویکردی مینیمال، به دنبال وب‌سایتی بود که بتواند احساس فضاهایی را که طراحی می‌کند منتقل کند، نه فقط لیستی از پروژه‌ها. سایمون با پالتی از رنگ‌های کِرم و طلایی، تایپوگرافی وسیع، و گالری بزرگ از پروژه‌ها (از آشپزخانه مدرن تا ویلای شمال)، تجربه‌ای شبیه ورق‌زدن یک مجله معماری برای بازدیدکنندگان ساخت.",
+        challenge:
+            "نمایش درست کیفیت بصری پروژه‌ها در کنار ایجاد حس اعتماد برای مشتریانی که می‌خواهند خانه یا فضای کاری خود را بازسازی کنند.",
+        solution:
+            "گالری پروژه با برچسب دسته‌بندی (ویلا، آپارتمان، فضای تجاری)، بخش داستان تأسیس استودیو، و فرم اختصاصی درخواست مشاوره پروژه.",
+        stats: [
+            { label: "دسته پروژه در گالری", value: "۴" },
+            { label: "پالت رنگی متفاوت (روز/شب)", value: "۲" },
+            { label: "ریسپانسیو موبایل", value: "۱۰۰٪" },
+        ],
+        tags: ["گالری پروژه با فیلتر", "تایپوگرافی اختصاصی", "بخش تیم و تاریخچه", "فرم درخواست مشاوره"],
+        images: [
+            { src: "/portfolio2/didar1.png", alt: "صفحه اصلی استودیو دیدار", label: "صفحه اصلی" },
+            { src: "/portfolio2/didar2.png", alt: "گالری نمونه‌کارهای دیدار", label: "نمونه‌کارها" },
+            { src: "/portfolio2/didar3.png", alt: "بخش درباره ما دیدار", label: "درباره ما" },
+            { src: "/portfolio2/didar4.png", alt: "بخش سوالات متداول دیدار", label: "سوالات متداول" },
+            { src: "/portfolio2/didar5.png", alt: "بخش تماس با ما دیدار", label: "تماس با ما" },
+        ],
+    },
+    {
+        id: "solarno",
+        index: "۰۳",
+        client: "سولارنو (SolarNo Energy)",
+        category: "انرژی خورشیدی و پروژه‌های صنعتی",
+        title: "وب‌سایتی که فناوری انرژی خورشیدی را قابل‌لمس و قابل‌اعتماد نشان می‌دهد",
+        description:
+            "سولارنو به عنوان یک شرکت فعال در نصب و راه‌اندازی نیروگاه‌های خورشیدی، به وب‌سایتی نیاز داشت که هم فناوری پیشرفته را به نمایش بگذارد و هم اعداد و نتایج (مثل درصد کاهش هزینه) را به‌وضوح نشان دهد. سایمون با طراحی تمی تیره و پرانرژی، برجسته‌سازی آمار کلیدی روی خود عکس پنل‌های خورشیدی، و گالری پروژه‌های اجراشده، حس نوآوری و اعتبار فنی سولارنو را به مخاطب منتقل کرد.",
+        challenge:
+            "نیاز به نمایش هم‌زمان داده‌های فنی (کاهش هزینه، تولید انرژی) و اعتمادسازی برای مشتریان خانگی و صنعتی در یک صفحه.",
+        solution:
+            "بج‌های آماری روی تصویر هیرو، گالری پروژه‌های نصب‌شده، معرفی تیم فنی و مدیریتی، و اسلایدر نظرات مشتریان.",
+        stats: [
+            { label: "پروژه در گالری نمونه‌کار", value: "۶" },
+            { label: "عضو تیم معرفی‌شده", value: "۴" },
+            { label: "ریسپانسیو موبایل", value: "۱۰۰٪" },
+        ],
+        tags: ["هیروی داده‌محور", "گالری پروژه صنعتی", "اسلایدر نظرات مشتری", "فرم مشاوره رایگان"],
+        images: [
+            { src: "/portfolio3/solarno1.png", alt: "صفحه اصلی سولارنو", label: "صفحه اصلی" },
+            { src: "/portfolio3/solarno2.png", alt: "گالری پروژه‌های سولارنو", label: "پروژه‌ها" },
+            { src: "/portfolio3/solarno3.png", alt: "بخش تیم سولارنو", label: "تیم ما" },
+            { src: "/portfolio3/solarno4.png", alt: "بخش نظرات مشتریان سولارنو", label: "نظرات مشتریان" },
+            { src: "/portfolio3/solarno5.png", alt: "بخش تماس با ما سولارنو", label: "تماس با ما" },
+        ],
+    },
+];
+
 export default function PortfolioPage() {
-    const [mobileOpen, setMobileOpen] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
+    const [modalSrc, setModalSrc] = useState("");
+    const [modalAlt, setModalAlt] = useState("");
+    // state برای هر پروژه – ایندکس تصویر فعال
+    const [activeIndexes, setActiveIndexes] = useState(
+        projectsData.map(() => 0)
+    );
 
-    const toggleMobile = () => setMobileOpen(!mobileOpen);
-    const closeMobile = () => setMobileOpen(false);
+    const handleTabClick = (projectIdx, imgIdx) => {
+        const newIndexes = [...activeIndexes];
+        newIndexes[projectIdx] = imgIdx;
+        setActiveIndexes(newIndexes);
+    };
 
+    const openModal = (src, alt) => {
+        setModalSrc(src);
+        setModalAlt(alt);
+        setModalOpen(true);
+        document.body.style.overflow = "hidden";
+    };
+
+    const closeModal = () => {
+        setModalOpen(false);
+        document.body.style.overflow = "auto";
+    };
     return (
-        <div className={styles.page}>
-            {/* ===== HEADER ===== */}
-            {/* <header>
-                <div className="container nav-wrap">
-                    <Link href="/" className="logo">
-                        <span className="logo-mark"><img src="/icon.jpg" style={{width: "100%", height: '100%' ,borderRadius: '9px'}}/></span>
-                        سایمون 
+        <main>
+            {/* ===== BANNER ===== */}
+            <section className={styles.pageBanner}>
+                <div className={styles.bannerBlobA}></div>
+                <div className={styles.bannerBlobB}></div>
+                <div className={`container ${styles.bannerContainer}`}>
+                    <span className="eyebrow">نمونه‌کارهای سایمون</span>
+                    <h1>سه پروژه، سه صنعت متفاوت، یک استاندارد کیفیت</h1>
+                    <p className="section-sub center" style={{ marginTop: "18px" }}>
+                        در ادامه سه وب‌سایتی را می‌بینید که تیم سایمون از صفر تا اجرا برای
+                        مشتریان خود طراحی کرده است؛ هرکدام با هویت بصری، هدف و داستان مخصوص
+                        به خودشان.
+                    </p>
+                    <div className={styles.breadcrumb}>
+                        <Link href="/">صفحه اصلی</Link>
+                        <span>/</span>
+                        <span>نمونه کارها</span>
+                    </div>
+                </div>
+            </section>
+
+            {/* ===== STATS ===== */}
+            <section className={styles.portfolioStats}>
+                <div className="container">
+                    <div className={styles.statsBar}>
+                        <div className={styles.statItem}>
+                            <strong>۳</strong>
+                            <span>پروژه اجراشده</span>
+                        </div>
+                        <div className={styles.statSep}></div>
+                        <div className={styles.statItem}>
+                            <strong>۳</strong>
+                            <span>صنعت متفاوت</span>
+                        </div>
+                        <div className={styles.statSep}></div>
+                        <div className={styles.statItem}>
+                            <strong>۱۰۰٪</strong>
+                            <span>طراحی اختصاصی</span>
+                        </div>
+                        <div className={styles.statSep}></div>
+                        <div className={styles.statItem}>
+                            <strong>۱۰۰٪</strong>
+                            <span>تحویل به‌موقع</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ===== PROJECTS ===== */}
+            {projectsData.map((project, idx) => {
+                const activeImgIdx = activeIndexes[idx] || 0;
+                const isEven = idx % 2 === 0;
+                const bgClass = isEven ? "" : styles.bgSoft;
+
+                return (
+                    <section
+                        key={project.id}
+                        className={`${styles.caseStudy} ${bgClass}`}
+                    >
+                        <div className={`container ${styles.caseGrid} ${!isEven ? styles.reverse : ""}`}>
+                            {/* متن */}
+                            <div className={styles.caseText}>
+                                <div className={styles.caseIndexRow}>
+                                    <span className={styles.caseIndex}>{project.index}</span>
+                                    <span className={styles.caseClient}>{project.client}</span>
+                                </div>
+                                <span className={`eyebrow ${styles.categoryBadge}`}>
+                                    {project.category}
+                                </span>
+                                <h2 className={styles.caseTitle}>{project.title}</h2>
+                                <p className={styles.caseDesc}>{project.description}</p>
+
+                                <div className={styles.caseCsGrid}>
+                                    <div className={styles.box}>
+                                        <h4>چالش پروژه</h4>
+                                        <p>{project.challenge}</p>
+                                    </div>
+                                    <div className={styles.box}>
+                                        <h4>راهکار سایمون</h4>
+                                        <p>{project.solution}</p>
+                                    </div>
+                                </div>
+
+                                <div className={styles.caseStats}>
+                                    {project.stats.map((stat, i) => (
+                                        <div key={i}>
+                                            <strong>{stat.value}</strong>
+                                            <span>{stat.label}</span>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <div className={styles.caseTags}>
+                                    {project.tags.map((tag, i) => (
+                                        <span key={i}>{tag}</span>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* تصاویر + تب‌ها */}
+                            <div className={styles.caseVisual}>
+                                <div className={styles.browserFrame}>
+                                    <div className={styles.browserTopbar}>
+                                        <span style={{ background: "#F16057" }}></span>
+                                        <span style={{ background: "#F6BE4F" }}></span>
+                                        <span style={{ background: "#3FC96B" }}></span>
+                                        <div className={styles.browserUrl}>
+                                            {project.id === "arian" && "ariantrading.co"}
+                                            {project.id === "deedar" && "deedar.design"}
+                                            {project.id === "solarno" && "solarno.energy"}
+                                        </div>
+                                    </div>
+                                    <div className={styles.browserBody}>
+                                        {project.images.map((img, imgIdx) => (
+                                            <img
+                                                onClick={() => {
+                                                    if (imgIdx === activeImgIdx) {
+                                                        openModal(img.src, img.alt);
+                                                    }
+                                                }}
+                                                style={{ cursor: imgIdx === activeImgIdx ? "pointer" : "default" }}
+                                                key={imgIdx}
+                                                src={img.src}
+                                                alt={img.alt}
+                                                className={imgIdx === activeImgIdx ? styles.active : ""}
+                                            />
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className={styles.pageTabs}>
+                                    {project.images.map((img, imgIdx) => (
+                                        <button
+                                            key={imgIdx}
+                                            className={imgIdx === activeImgIdx ? styles.active : ""}
+                                            onClick={() => handleTabClick(idx, imgIdx)}
+                                        >
+                                            {img.label}
+                                        </button>
+                                    ))}
+                                </div>
+                                <div className={styles.pageTabsCaption}>
+                                    چند بخش از وب‌سایت طراحی‌شده برای {project.client}؛ برای دیدن
+                                    هر بخش روی دکمه‌ها کلیک کنید.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                );
+            })}
+
+            {/* ===== CTA ===== */}
+            <section className={styles.ctaLink}>
+                <div className="container">
+                    <Link href="/contactUs" className={styles.ctaBox}>
+                        <div>
+                            <h3>پروژه بعدی، داستان کسب‌وکار شماست</h3>
+                            <p>
+                                اگر ایده‌ای در ذهن دارید، تیم سایمون آماده است تا مثل این
+                                نمونه‌کارها، آن را به یک وب‌سایت حرفه‌ای و اثرگذار تبدیل کند.
+                            </p>
+                        </div>
+                        <span className={styles.arrow}>←</span>
                     </Link>
-                    <nav>
-                        <ul>
-                            <li><Link href="/">صفحه اصلی</Link></li>
-                            <li><Link href="/khadamat">خدمات ما</Link></li>
-                            <li><Link href="/portfolios" className="active">نمونه کارها</Link></li>
-                            <li><Link href="/aboutUs">درباره ما</Link></li>
-                            <li><Link href="/contactUs">تماس با ما</Link></li>
-                        </ul>
-                    </nav>
-                    <div className="nav-cta">
-                        <Link href="/contact" className="btn btn-orange">درخواست مشاوره</Link>
-                        <span
-                            className={`burger ${mobileOpen ? "open" : ""}`}
-                            onClick={toggleMobile}
-                        >
-                            {mobileOpen ? "✕" : "☰"}
-                        </span>
+                </div>
+            </section>
+
+
+            {modalOpen && (
+                <div className={styles.modalOverlay} onClick={closeModal}>
+                    <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+                        <button className={styles.modalClose} onClick={closeModal}>
+                            ✕
+                        </button>
+                        <img src={modalSrc} alt={modalAlt} />
                     </div>
                 </div>
-                <div className={`mobile-nav ${mobileOpen ? "open" : ""}`}>
-                    <ul>
-                        <li><Link href="/" onClick={closeMobile}>صفحه اصلی</Link></li>
-                        <li><Link href="/khadamat" onClick={closeMobile}>خدمات ما</Link></li>
-                        <li><Link href="/portfolio" className="active" onClick={closeMobile}>نمونه کارها</Link></li>
-                        <li><Link href="/about" onClick={closeMobile}>درباره ما</Link></li>
-                        <li><Link href="/contact" onClick={closeMobile}>تماس با ما</Link></li>
-                    </ul>
-                    <div className="mobile-cta">
-                        <Link href="/contact" className="btn btn-orange" onClick={closeMobile}>درخواست مشاوره</Link>
-                    </div>
-                </div>
-            </header> */}
-
-            <main>
-                {/* ===== PAGE BANNER ===== */}
-                <section className={styles.pageBanner}>
-                    <div className={styles.bannerBlobA}></div>
-                    <div className={styles.bannerBlobB}></div>
-                    <div className="container">
-                        <span className="eyebrow">پکیج‌های طراحی سایت سایمون</span>
-                        <h1>سه پکیج حرفه‌ای برای هر نوع کسب‌وکار</h1>
-                        <p className="section-sub center" style={{ marginTop: "18px" }}>
-                            چه یک برند شرکتی باشید، چه فردی خلاق یا صاحب فروشگاه اینترنتی؛ ما پکیج‌های طراحی اختصاصی را آماده کرده‌ایم که متناسب با نیاز شما، بهترین حضور دیجیتال را بسازیم.
-                        </p>
-                        <div className={styles.breadcrumb}>
-                            <Link href="/">صفحه اصلی</Link>
-                            <span>/</span>
-                            <span>پکیج‌های طراحی</span>
-                        </div>
-                    </div>
-                </section>
-
-                {/* ===== STATS STRIP ===== */}
-                <section className={styles.portfolioStats}>
-                    <div className="container">
-                        <div className={styles.statsBar}>
-                            <div className={styles.statItem}><strong>۳</strong><span>پکیج تخصصی</span></div>
-                            <div className={styles.statSep}></div>
-                            <div className={styles.statItem}><strong>۱۰۰٪</strong><span>طراحی اختصاصی</span></div>
-                            <div className={styles.statSep}></div>
-                            <div className={styles.statItem}><strong>پشتیبانی</strong><span>۲۴/۷</span></div>
-                            <div className={styles.statSep}></div>
-                            <div className={styles.statItem}><strong>سئو</strong><span>بهینه‌سازی شده</span></div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* ===== PACKAGE 1 : CORPORATE ===== */}
-                <section className={styles.caseStudy}>
-                    <div className={`container ${styles.caseGrid}`}>
-                        <div className={styles.caseText}>
-                            <span className={styles.caseIndex}>۰۱</span>
-                            <span className="eyebrow">پکیج شرکتی</span>
-                            <h2 className={styles.caseTitle}>پکیج شرکتی؛ هویت دیجیتال حرفه‌ای برای برند شما</h2>
-                            <p className={styles.caseDesc}>
-                                این پکیج برای سازمان‌ها، شرکت‌ها و برندهایی طراحی شده که به دنبال یک وب‌سایت جامع، شکیل و قابل اعتماد هستند. از صفحه‌ی معرفی برند و تیم گرفته تا بخش خدمات، نمونه‌کارها، وبلاگ و فرم تماس؛ همه چیز برای نمایش حرفه‌ای کسب‌وکار شما آماده است. طراحی مدرن، ریسپانسیو و بهینه‌سازی شده برای موتورهای جستجو، همراه با پنل مدیریت آسان برای به‌روزرسانی محتوا.
-                            </p>
-
-                            <div className={styles.caseCsGrid}>
-                                <div className={styles.box}>
-                                    <h4>نیاز کسب‌وکار</h4>
-                                    <p>داشتن یک وب‌سایت رسمی برای معرفی برند، جلب اعتماد مشتریان و ارائه اطلاعات کامل به مخاطبان.</p>
-                                </div>
-                                <div className={styles.box}>
-                                    <h4>راهکار سایمون</h4>
-                                    <p>طراحی سایت شرکتی با معماری اطلاعات منظم، رابط کاربری شیک، سرعت بالا و قابلیت مدیریت آسان محتوا.</p>
-                                </div>
-                            </div>
-
-                            <div className={styles.caseStats}>
-                                <div><strong>تا ۱۰</strong><span>صفحه تخصصی</span></div>
-                                <div><strong>۲ هفته</strong><span>زمان تحویل</span></div>
-                                <div><strong>سئو</strong><span>داخلی و فنی</span></div>
-                            </div>
-
-                            <div className={styles.caseTags}>
-                                <span>طراحی اختصاصی</span>
-                                <span>ریسپانسیو</span>
-                                <span>پنل مدیریت</span>
-                                <span>بهینه‌سازی سرعت</span>
-                            </div>
-
-                            <div className={styles.caseDone}>✅ پکیج آماده ارائه – مناسب برای شرکت‌ها و برندها</div>
-                        </div>
-
-                        <div className={styles.caseVisual}>
-                            <svg viewBox="0 0 700 520" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="blobBlue1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" stopColor="var(--blue)" />
-                                        <stop offset="100%" stopColor="var(--blue-dark)" />
-                                    </linearGradient>
-                                </defs>
-                                <path d="M340,35 C470,15 610,70 655,195 C695,310 630,440 495,480 C355,520 175,505 90,400 C10,300 30,150 150,80 C205,48 275,48 340,35 Z" fill="url(#blobBlue1)" />
-                                <rect x="90" y="95" width="500" height="330" rx="26" fill="#fff" stroke="var(--blue)" strokeWidth="6" />
-                                <rect x="122" y="130" width="26" height="26" rx="7" fill="var(--blue)" />
-                                <rect x="168" y="138" width="80" height="9" rx="4.5" fill="var(--ph-dark)" />
-                                <rect x="470" y="128" width="88" height="26" rx="8" fill="var(--orange)" />
-                                <rect x="122" y="176" width="140" height="110" rx="14" fill="var(--bg-soft)" />
-                                <rect x="138" y="256" width="90" height="10" rx="5" fill="var(--ph-dark)" />
-                                <rect x="138" y="272" width="55" height="12" rx="6" fill="var(--blue)" />
-                                <rect x="278" y="176" width="140" height="110" rx="14" fill="var(--bg-soft)" />
-                                <rect x="294" y="256" width="90" height="10" rx="5" fill="var(--ph-dark)" />
-                                <rect x="294" y="272" width="55" height="12" rx="6" fill="var(--blue)" />
-                                <rect x="434" y="176" width="124" height="110" rx="14" fill="var(--bg-soft)" />
-                                <rect x="450" y="256" width="90" height="10" rx="5" fill="var(--ph-dark)" />
-                                <rect x="450" y="272" width="55" height="12" rx="6" fill="var(--blue)" />
-                                <rect x="122" y="312" width="280" height="16" rx="8" fill="var(--ph)" />
-                                <rect x="122" y="336" width="180" height="12" rx="6" fill="var(--ph)" />
-                                <rect x="452" y="308" width="106" height="44" rx="12" fill="var(--blue)" />
-                            </svg>
-                            <div className={`${styles.caseChip} ${styles.cc1}`}><span className={styles.dot}>🏢</span> صفحه برند و تیم</div>
-                            <div className={`${styles.caseChip} ${styles.cc2}`}><span className={`${styles.dot} ${styles.peach}`}>⚡</span> سرعت بارگذاری بالا</div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* ===== PACKAGE 2 : PERSONAL ===== */}
-                <section className={`${styles.caseStudy} ${styles.alt}`}>
-                    <div className={`container ${styles.caseGrid} ${styles.reverse}`}>
-                        <div className={styles.caseText}>
-                            <span className={styles.caseIndex}>۰۲</span>
-                            <span className="eyebrow" style={{ background: "#FFF3DD", color: "var(--orange-2)" }}>پکیج شخصی</span>
-                            <h2 className={styles.caseTitle}>پکیج شخصی؛ حضور آنلاین برای افراد، مشاغل کوچک و فریلنسرها</h2>
-                            <p className={styles.caseDesc}>
-                                این پکیج ویژه افرادی است که می‌خواهند با هزینه‌ای مقرون‌به‌صرفه، یک وب‌سایت شخصی، نمونه‌کارهای خلاقانه یا صفحه‌ی معرفی خدمات خود داشته باشند. از رزومه و گالری آثار گرفته تا فرم تماس و بخش وبلاگ؛ همه چیز برای نمایش توانمندی‌های شما در فضای دیجیتال. طراحی مینیمال، زیبا و کاملاً ریسپانسیو، مناسب برای موبایل و دسکتاپ.
-                            </p>
-
-                            <div className={styles.caseCsGrid}>
-                                <div className={styles.box}>
-                                    <h4>نیاز کسب‌وکار</h4>
-                                    <p>داشتن یک وب‌سایت شخصی برای معرفی خود، جذب مشتری یا کارفرما و نمایش نمونه‌کارها.</p>
-                                </div>
-                                <div className={styles.box}>
-                                    <h4>راهکار سایمون</h4>
-                                    <p>طراحی سایت شخصی با تأکید بر هویت فردی، گالری آثار، رزومه آنلاین و فرم ارتباطی ساده.</p>
-                                </div>
-                            </div>
-
-                            <div className={styles.caseStats}>
-                                <div><strong>تا ۵</strong><span>صفحه اختصاصی</span></div>
-                                <div><strong>۱۰ روز</strong><span>زمان تحویل</span></div>
-                                <div><strong>گالری</strong><span>آثار و تصاویر</span></div>
-                            </div>
-
-                            <div className={styles.caseTags}>
-                                <span>طراحی مینیمال</span>
-                                <span>ریسپانسیو</span>
-                                <span>رزومه آنلاین</span>
-                                <span>فرم تماس</span>
-                            </div>
-
-                            <div className={styles.caseDone}>✅ پکیج آماده ارائه – مناسب برای افراد، فریلنسرها و مشاغل کوچک</div>
-                        </div>
-
-                        <div className={styles.caseVisual}>
-                            <svg viewBox="0 0 700 520" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="blobOrange2" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" stopColor="var(--orange)" />
-                                        <stop offset="100%" stopColor="var(--orange-2)" />
-                                    </linearGradient>
-                                </defs>
-                                <path d="M340,35 C470,15 610,70 655,195 C695,310 630,440 495,480 C355,520 175,505 90,400 C10,300 30,150 150,80 C205,48 275,48 340,35 Z" fill="url(#blobOrange2)" />
-                                <rect x="90" y="95" width="500" height="330" rx="26" fill="#fff" stroke="var(--orange-2)" strokeWidth="6" />
-                                <circle cx="150" cy="150" r="26" fill="var(--bg-soft)" />
-                                <path d="M150,138 a12,12 0 1,1 0,24 a12,12 0 1,1 0,-24" fill="var(--blue)" />
-                                <rect x="188" y="140" width="120" height="10" rx="5" fill="var(--ph-dark)" />
-                                <rect x="188" y="158" width="80" height="9" rx="4.5" fill="var(--ph)" />
-                                <rect x="450" y="128" width="98" height="30" rx="15" fill="var(--blue)" />
-                                <rect x="122" y="196" width="456" height="1" fill="var(--line)" />
-                                <rect x="122" y="222" width="98" height="80" rx="12" fill="var(--bg-soft)" />
-                                <rect x="234" y="222" width="98" height="80" rx="12" fill="var(--bg-soft)" />
-                                <rect x="346" y="222" width="98" height="80" rx="12" fill="var(--orange)" />
-                                <rect x="458" y="222" width="98" height="80" rx="12" fill="var(--bg-soft)" />
-                                <rect x="122" y="326" width="200" height="14" rx="7" fill="var(--ph-dark)" />
-                                <rect x="122" y="350" width="320" height="10" rx="5" fill="var(--ph)" />
-                                <rect x="122" y="368" width="260" height="10" rx="5" fill="var(--ph)" />
-                            </svg>
-                            <div className={`${styles.caseChip} ${styles.cc1}`}><span className={styles.dot}>🧑‍💻</span> رزومه و نمونه‌کار</div>
-                            <div className={`${styles.caseChip} ${styles.cc2}`}><span className={`${styles.dot} ${styles.peach}`}>📱</span> طراحی موبایل‌فرندلی</div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* ===== PACKAGE 3 : E-COMMERCE ===== */}
-                <section className={styles.caseStudy}>
-                    <div className={`container ${styles.caseGrid}`}>
-                        <div className={styles.caseText}>
-                            <span className={styles.caseIndex}>۰۳</span>
-                            <span className="eyebrow">پکیج فروشگاهی</span>
-                            <h2 className={styles.caseTitle}>پکیج فروشگاهی؛ فروشگاه اینترنتی کامل و قدرتمند</h2>
-                            <p className={styles.caseDesc}>
-                                این پکیج برای کسب‌وکارهایی طراحی شده که می‌خواهند محصولات خود را به صورت آنلاین بفروشند. یک فروشگاه اینترنتی حرفه‌با دسته‌بندی محصولات، فیلترهای پیشرفته، سبد خرید، درگاه پرداخت امن، مدیریت سفارشات و پنل جامع برای مدیریت محصولات و تخفیف‌ها. همچنین قابلیت اتصال به سیستم‌های انبارداری و ارسال خودکار پیامک و ایمیل.
-                            </p>
-
-                            <div className={styles.caseCsGrid}>
-                                <div className={styles.box}>
-                                    <h4>نیاز کسب‌وکار</h4>
-                                    <p>داشتن یک فروشگاه اینترنتی با امکان مدیریت آسان محصولات، پرداخت آنلاین و پیگیری سفارشات.</p>
-                                </div>
-                                <div className={styles.box}>
-                                    <h4>راهکار سایمون</h4>
-                                    <p>طراحی فروشگاهی با معماری پیشرفته، درگاه پرداخت، پنل مدیریت، و امکانات بازاریابی مثل کد تخفیف.</p>
-                                </div>
-                            </div>
-
-                            <div className={styles.caseStats}>
-                                <div><strong>نامحدود</strong><span>محصول</span></div>
-                                <div><strong>۴ هفته</strong><span>زمان تحویل</span></div>
-                                <div><strong>پرداخت</strong><span>امن و سریع</span></div>
-                            </div>
-
-                            <div className={styles.caseTags}>
-                                <span>دسته‌بندی پیشرفته</span>
-                                <span>درگاه پرداخت</span>
-                                <span>مدیریت سفارشات</span>
-                                <span>بازاریابی آنلاین</span>
-                            </div>
-
-                            <div className={styles.caseDone}>✅ پکیج آماده ارائه – مناسب برای فروشگاه‌های آنلاین و خرده‌فروشی‌ها</div>
-                        </div>
-
-                        <div className={styles.caseVisual}>
-                            <svg viewBox="0 0 700 520" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="blobBlue3" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" stopColor="var(--blue)" />
-                                        <stop offset="100%" stopColor="var(--blue-dark)" />
-                                    </linearGradient>
-                                </defs>
-                                <path d="M340,35 C470,15 610,70 655,195 C695,310 630,440 495,480 C355,520 175,505 90,400 C10,300 30,150 150,80 C205,48 275,48 340,35 Z" fill="url(#blobBlue3)" />
-                                <rect x="90" y="95" width="500" height="330" rx="26" fill="#fff" stroke="var(--blue)" strokeWidth="6" />
-                                <rect x="112" y="115" width="480" height="200" rx="14" fill="#DCE7FF" />
-                                <path d="M180,270 L230,210 L280,250 L340,180 L400,240 L470,190 L530,260" fill="none" stroke="var(--blue)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-                                <circle cx="230" cy="210" r="10" fill="var(--orange)" />
-                                <circle cx="340" cy="180" r="10" fill="var(--blue-dark)" />
-                                <circle cx="470" cy="190" r="10" fill="var(--orange)" />
-                                <rect x="122" y="336" width="150" height="66" rx="14" fill="var(--bg-soft)" />
-                                <rect x="138" y="352" width="90" height="10" rx="5" fill="var(--ph-dark)" />
-                                <rect x="138" y="370" width="60" height="12" rx="6" fill="var(--blue)" />
-                                <rect x="290" y="336" width="150" height="66" rx="14" fill="var(--bg-soft)" />
-                                <rect x="306" y="352" width="90" height="10" rx="5" fill="var(--ph-dark)" />
-                                <rect x="306" y="370" width="60" height="12" rx="6" fill="var(--blue)" />
-                                <rect x="458" y="336" width="98" height="66" rx="14" fill="var(--orange)" />
-                            </svg>
-                            <div className={`${styles.caseChip} ${styles.cc1}`}><span className={styles.dot}>🛒</span> سبد خرید هوشمند</div>
-                            <div className={`${styles.caseChip} ${styles.cc2}`}><span className={`${styles.dot} ${styles.peach}`}>💳</span> درگاه پرداخت امن</div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* ===== CTA LINK TO CONTACT ===== */}
-                <section className={styles.ctaLink}>
-                    <div className="container">
-                        <Link href="/contactUs" className={styles.box}>
-                            <div>
-                                <h3>همین حالا پکیج مناسب خود را انتخاب کنید</h3>
-                                <p>اگر می‌خواهید وب‌سایت خود را با یکی از این سه پکیج حرفه‌ای راه‌اندازی کنید، تیم سایمون آماده مشاوره و اجراست.</p>
-                            </div>
-                            <span className={styles.arrow}>←</span>
-                        </Link>
-                    </div>
-                </section>
-            </main>
-
-            {/* ===== FOOTER ===== */}
-            {/* <footer>
-                <svg className="footer-wave" viewBox="0 0 1200 60" preserveAspectRatio="none" height="50">
-                    <path d="M0,40 C300,0 900,0 1200,40 L1200,60 L0,60 Z" fill="var(--orange)"></path>
-                </svg>
-                <div className="container footer-top">
-                    <div className="footer-brand">
-                        <Link href="/" className="logo"><span className="logo-mark"><img src="/icon.jpg" style={{width: "100%", height: '100%' ,borderRadius: '9px'}}/></span> سایمون</Link>
-                        <p>کسب‌وکار شما را وارد دنیای دیجیتال ماندگار و تاثیرگذار می‌کند.</p>
-                        <div className="footer-social">
-                            <Link href="#">in</Link><Link href="#">ig</Link><Link href="#">tw</Link><Link href="#">tg</Link>
-                        </div>
-                    </div>
-                    <div className="footer-col">
-                        <h4>خدمات ما</h4>
-                        <ul>
-                            <li><Link href="/khadamat">طراحی سایت</Link></li>
-                            <li><Link href="/khadamat">طراحی محصول</Link></li>
-                            <li><Link href="/khadamat">سئو</Link></li>
-                        </ul>
-                    </div>
-                    <div className="footer-col">
-                        <h4>لینک‌های مرتبط</h4>
-                        <ul>
-                            <li><Link href="/">صفحه اصلی</Link></li>
-                            <li><Link href="/portfolio">نمونه کارها</Link></li>
-                            <li><Link href="/about">درباره ما</Link></li>
-                            <li><Link href="/contact">تماس با ما</Link></li>
-                        </ul>
-                    </div>
-                    <div className="footer-col">
-                        <h4>ارتباط با ما</h4>
-                        <ul className="footer-contact">
-                            <li>📍 تهران، خیابان آزادی</li>
-                            <li>0930 128 8166</li>
-                            <li>✉️ info@simon.ir</li>
-                        </ul>
-                    </div>
-                </div>
-                <div className="container footer-bottom">
-                    <span>© تمامی حقوق برای سایمون محفوظ است.</span>
-                    <span>طراحی و توسعه با ❤ توسط تیم سایمون</span>
-                </div>
-            </footer> */}
-        </div>
+            )}
+        </main>
     );
 }

@@ -67,7 +67,7 @@ export default function ContactPage() {
                                 ما همیشه آماده شنیدن نظرات، پیشنهادات و سوالات شما هستیم. اگر به راهنمایی نیاز دارید، درخواست همکاری دارید یا هر گونه پرسشی برایتان پیش آمده، می‌توانید از طریق فرم تماس، ایمیل یا شماره‌های درج‌شده با ما در ارتباط باشید. تیم ما در سریع‌ترین زمان ممکن پاسخگوی شما خواهد بود.
                             </p>
                             <div className={styles.heroActions}>
-                                <a href="tel:0939217166" className="btn btn-primary"> تماس با ما </a>
+                                <a href="tel:09301288166" className="btn btn-primary"> تماس با ما </a>
                                 <a href="#form" className="btn btn-ghost">ارسال پیام</a>
                             </div>
                         </div>
@@ -98,8 +98,8 @@ export default function ContactPage() {
                             <div className={styles.infoCard}>
                                 <span className={styles.infoIcon}>📱</span>
                                 <h3>تلفن همراه</h3>
-                                <span className={styles.val}>0939217166</span>
-                                <a href="tel:+989123456789" className={styles.miniBtn}>تماس بگیرید</a>
+                                <span className={styles.val}>09301288166</span>
+                                <Link href="tel:+989301288166" className={styles.miniBtn}>تماس بگیرید</Link>
                             </div>
 
                             <div className={styles.infoCard}>
@@ -110,9 +110,9 @@ export default function ContactPage() {
                             </div>
                             <div className={styles.infoCard}>
                                 <span className={styles.infoIcon}>📍</span>
-                                <h3>آدرس دفتر</h3>
+                                <h3>امکان ملاقات در</h3>
                                 <span className={`${styles.val} ${styles.rtl}`}>تبریز</span>
-                                <a href="#" className={styles.miniBtn}>مسیریابی</a>
+                                <Link href="tel:+989301288166" className={styles.miniBtn}>تماس بگیرید</Link>
                             </div>
                         </div>
                     </div>
@@ -129,13 +129,18 @@ export default function ContactPage() {
                             <h3>ما را در شبکه‌های اجتماعی دنبال کنید</h3>
                             <p>برای دیدن آخرین پروژه‌ها، اخبار و پیشنهادهای ویژه سایمون، در شبکه‌های اجتماعی همراه ما باشید.</p>
                             <div className={styles.socialIcons}>
-                                <a href="#" aria-label="توییتر"><img src="/Vector (6).svg" style={{width: "25%" }}/></a>  
-                                <a href="#" aria-label="لینکدین"><img src="/Vector (7).svg" style={{width: "50%" }}/></a>                                                              
-                                <a href="#" aria-label="اینستاگرام"><img src="/Group 95.png" style={{width: "50%" }}/></a>
-                                <a href="#" aria-label="تلگرام"><img src="/Group (3).svg" style={{width: "50%" }}/></a>
-                                <a href="#" aria-label="واتساپ"><img src="/Vector (1).png" style={{width: "50%" }}/></a>
-
-
+                                <Link href="https://ble.ir/simondevs">
+                                    <img src="/bale.png" style={{ width: "50%" }} alt="بله" />
+                                </Link>
+                                <Link href="https://instagram.com/simon.devs">
+                                    <img src="/Group (3).svg" style={{ width: "50%" }} alt="اینستاگرام" />
+                                </Link>
+                                <Link href="https://rubika.ir/simondevs">
+                                    <img src="/Vector (1).png" style={{ width: "50%" }} alt="روبیکا" />
+                                </Link>
+                                <Link href="https://wa.me/989920587634">
+                                    <img src="/Group 95.png" style={{ width: "50%" }} alt="واتساپ" />
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -152,7 +157,7 @@ export default function ContactPage() {
                                     <span>معمولاً کمتر از ۲۴ ساعت به پیام‌های شما پاسخ می‌دهیم.</span>
                                 </div>
                             </div>
-                            <a href="tel:+989123456789" className="btn btn-primary">📞 تماس فوری</a>
+                            <a href="tel:+989301288166" className="btn btn-primary">📞 تماس فوری</a>
                         </div>
                     </div>
                 </section>

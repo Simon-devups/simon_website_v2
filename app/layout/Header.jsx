@@ -92,12 +92,11 @@ export default function Header() {
               </Link>
             </li>
           ))}
-        </ul>
-        <div className="mobile-cta">
-          <Link href="/#contact" className="btn btn-orange" onClick={closeMenu}>
+          <Link href="/#contact" className="btn btn-orange" onClick={closeMenu} style={{marginBottom: '0.2rem'}}>
             درخواست مشاوره
           </Link>
-        </div>
+        </ul>
+
       </div>
     </header>
   );

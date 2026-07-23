@@ -56,7 +56,9 @@ export default function Footer() {
         <div className="footer-col">
           <h4>ارتباط با ما</h4>
           <ul className="footer-contact">
-            <li style={{direction: 'ltr' , justifySelf: 'self-end'}}>0930 128 8166</li>
+            <li style={{direction: 'ltr' , justifySelf: 'self-end'}}>
+              <a href="tel:+989301288166">0930 128 8166</a>
+            </li>
             <li>simonwebdevups@gmail.com</li>
           </ul>
         </div>
