@@ -340,7 +340,7 @@ export default function PortfolioPage() {
                         <h4>ارتباط با ما</h4>
                         <ul className="footer-contact">
                             <li>📍 تهران، خیابان آزادی</li>
-                            <li>0992 058 7634</li>
+                            <li>0930 128 8166</li>
                             <li>✉️ info@simon.ir</li>
                         </ul>
                     </div>

@@ -132,36 +132,36 @@ export default function AboutPage() {
 
                         <div className={styles.teamGrid}>
                             <div className={styles.teamCard}>
-                                <div className={styles.teamPhoto}>
+                                {/* <div className={styles.teamPhoto}>
                                     👤<span className={styles.tag}>عکس عضو تیم</span>
-                                </div>
+                                </div> */}
                                 <div className={styles.teamInfo}>
                                     <h3>مدیر پروژه</h3>
                                     <span>هماهنگی و برنامه‌ریزی</span>
                                 </div>
                             </div>
                             <div className={styles.teamCard}>
-                                <div className={styles.teamPhoto}>
+                                {/* <div className={styles.teamPhoto}>
                                     👤<span className={styles.tag}>عکس عضو تیم</span>
-                                </div>
+                                </div> */}
                                 <div className={styles.teamInfo}>
                                     <h3>طراح رابط کاربری</h3>
                                     <span>UI / UX Design</span>
                                 </div>
                             </div>
                             <div className={styles.teamCard}>
-                                <div className={styles.teamPhoto}>
+                                {/* <div className={styles.teamPhoto}>
                                     👤<span className={styles.tag}>عکس عضو تیم</span>
-                                </div>
+                                </div> */}
                                 <div className={styles.teamInfo}>
                                     <h3>توسعه‌دهنده فرانت‌اند</h3>
                                     <span>Front-End Development</span>
                                 </div>
                             </div>
                             <div className={styles.teamCard}>
-                                <div className={styles.teamPhoto}>
+                                {/* <div className={styles.teamPhoto}>
                                     👤<span className={styles.tag}>عکس عضو تیم</span>
-                                </div>
+                                </div> */}
                                 <div className={styles.teamInfo}>
                                     <h3>توسعه‌دهنده بک‌اند</h3>
                                     <span>Back-End Development</span>

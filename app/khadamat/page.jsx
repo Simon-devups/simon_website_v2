@@ -208,9 +208,10 @@ export default function ServicesPage() {
                                 <h3>شرکتی</h3>
                                 <div className={styles.amount}>۱۴ <span>میلیون تومان از</span></div>
                                 <ul className={styles.priceFeats}>
-                                    <li><b>✓</b> سایت شرکتی تا ۵ صفحه</li>
+                                    <li><b>✓</b> سایت شرکتی تا 10 صفحه</li>
                                     <li><b>✓</b> طراحی واکنش‌گرا</li>
                                     <li><b>✓</b> سئوی پایه</li>
+                                    <li><b>✓</b> پشتیبانی رایگان یکساله</li>
                                 </ul>
                                 <Link href="/#contact" className="btn btn-ghost">درخواست مشاوره</Link>
                             </div>
@@ -224,7 +225,7 @@ export default function ServicesPage() {
                                     <li><b>✓</b> سایت فروشگاهی کامل</li>
                                     <li><b>✓</b> درگاه پرداخت و مدیریت سفارش</li>
                                     <li><b>✓</b> سئوی فنی و محتوایی</li>
-                                    <li><b>✓</b> سه ماه پشتیبانی رایگان</li>
+                                    <li><b>✓</b> پشتیبانی رایگان یکساله</li>
                                 </ul>
                                 <Link href="/#contact" className="btn btn-primary">درخواست مشاوره</Link>
                             </div>
@@ -236,7 +237,7 @@ export default function ServicesPage() {
                                 <ul className={styles.priceFeats}>
                                     <li><b>✓</b> وب‌سایت اختصاصی</li>
                                     <li><b>✓</b> برندینگ کامل</li>
-                                    <li><b>✓</b> پشتیبانی مستمر</li>
+                                    <li><b>✓</b>  پشتیبانی رایگان یکساله</li>
                                 </ul>
                                 <Link href="/#contact" className="btn btn-ghost">درخواست مشاوره</Link>
                             </div>

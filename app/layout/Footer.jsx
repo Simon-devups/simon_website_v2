@@ -31,7 +31,7 @@ export default function Footer() {
             <Link href="#"><img src="/Group 95.png" style={{width: "50%" }}/></Link>
             <Link href="#"><img src="/Group (3).svg" style={{width: "50%" }}/></Link>
             <Link href="#"><img src="/Vector (1).png" style={{width: "50%" }}/></Link>
-            <Link href="#"><img src="/Vector (7).svg" style={{width: "50%" }}/></Link>
+            {/* <Link href="#"><img src="/bale.jfif" style={{width: "50%" , backgroundBlendMode: 'screen'}}/></Link> */}
           </div>
         </div>
         <div className="footer-col">
@@ -54,8 +54,8 @@ export default function Footer() {
         <div className="footer-col">
           <h4>ارتباط با ما</h4>
           <ul className="footer-contact">
-            <li style={{direction: 'ltr' , justifySelf: 'self-end'}}>0992 058 7634</li>
-            <li>✉️ info@simon.ir</li>
+            <li style={{direction: 'ltr' , justifySelf: 'self-end'}}>0930 128 8166</li>
+            <li>simonwebdevups@gmail.com</li>
           </ul>
         </div>
       </div>

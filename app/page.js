@@ -153,7 +153,7 @@ export default function Home() {
             <div className="portfolio-grid">
               <div className="p-item p1" data-tag="سایت شرکتی"></div>
               <div className="p-item p2" data-tag="فروشگاهی"></div>
-              <div className="p-item p3" data-tag="اپلیکیشن"></div>
+              <div className="p-item p3" data-tag="شرکتی"></div>
               <div className="p-item p4" data-tag="برندینگ"></div>
               <div className="p-item p5" data-tag="لندینگ‌پیج"></div>
             </div>
@@ -284,11 +284,7 @@ export default function Home() {
                 <li><b>✓</b> پشتیبانی فنی مستمر پس از تحویل پروژه</li>
                 <li><b>✓</b> رعایت زمان‌بندی و شفافیت کامل در قرارداد</li>
               </ul>
-              <div className="about-mini-stats">
-                <div><strong>+100</strong><span>پروژه تکمیل‌شده</span></div>
-                <div><strong>+80</strong><span>برند همکار</span></div>
-                <div><strong>۹۸٪</strong><span>رضایت مشتریان</span></div>
-              </div>
+              
             </div>
           </div>
         </section>
@@ -300,18 +296,18 @@ export default function Home() {
             <div className="testi-grid">
               <div className="testi-card">
                 <span className="stars">★★★★★</span>
-                <p className="testi-quote">سلام، من احمدی هستم. طی پروژه از عملکرد تیم سایمون به شدت راضی بودم و نتیجه فراتر از انتظارم بود.</p>
-                <div className="testi-person"><span className="avatar"></span><div><strong>علیرضا احمدی</strong><span>مدیر فروشگاه آنلاین</span></div></div>
+                <p className="testi-quote">سلام، نکته‌ای که بیش از همه برایمان ارزشمند بود، توجه تیم به جزئیات برندینگ و هماهنگی کامل با اهداف کلان سازمان بود</p>
+                <div className="testi-person"><span className="avatar"></span><div><strong>امیر سلیمان زاده</strong><span>مدیر فروشگاه آنلاین</span></div></div>
               </div>
               <div className="testi-card">
                 <span className="stars">★★★★★</span>
-                <p className="testi-quote">سلام، من احمدی هستم. طی پروژه از عملکرد تیم سایمون به شدت راضی بودم و همکاری بسیار حرفه‌ای بود.</p>
-                <div className="testi-person"><span className="avatar"></span><div><strong>علیرضا احمدی</strong><span>مدیر برند شرکتی</span></div></div>
+                <p className="testi-quote">سلام، من  طی پروژه از عملکرد تیم سایمون به شدت راضی بودم و همکاری بسیار حرفه‌ای بود.</p>
+                <div className="testi-person"><span className="avatar"></span><div><strong>علیرضا رحمانی</strong><span>مدیر برند شرکتی</span></div></div>
               </div>
               <div className="testi-card">
                 <span className="stars">★★★★★</span>
-                <p className="testi-quote">سلام، من احمدی هستم. طی پروژه از عملکرد تیم سایمون به شدت راضی بودم و پشتیبانی عالی داشتند.</p>
-                <div className="testi-person"><span className="avatar"></span><div><strong>علیرضا احمدی</strong><span>بنیان‌گذار استارتاپ</span></div></div>
+                <p className="testi-quote">پروژه را کامل و طبق برنامه و قرارداد گرفتم</p>
+                <div className="testi-person"><span className="avatar"></span><div><strong>علیرضا احمدی</strong><span>برند شخصی</span></div></div>
               </div>
             </div>
           </div>
@@ -335,7 +331,7 @@ export default function Home() {
                   <span className="ic">📞</span>
                   <div>
                     <h4>شماره تماس</h4>
-                    <p dir="ltr">0992 058 7634</p>
+                    <p dir="ltr">0930 128 8166</p>
                   </div>
                 </div>
                 <div className="contact-card">
@@ -377,7 +373,10 @@ export default function Home() {
         <section className="articles" id="articles">
           <div className="container">
             <span className="eyebrow">وبلاگ سایمون</span>
-            <h2 className="section-title">آخرین مقالات</h2>
+            <div style={{display: 'flex' , justifyContent: 'space-between'}}>
+              <h2 className="section-title">آخرین مقالات</h2>
+              <Link href={"/articles"} style={{padding: '.5rem 2rem', borderRadius: '10rem' , backgroundColor: '#f3f6fe' , color: '#2b63e0', border: '1px solid #2b63e0' , fontWeight: '600' , fontSize: '1.1rem' }}>مقالات بیشتر <span ></span>←</Link>
+            </div>
             <p className="section-sub" style={{ marginTop: '14px' }}>نکات و تجربه‌های تیم سایمون درباره طراحی سایت، برندینگ و رشد کسب‌وکار آنلاین.</p>
             <div className="articles-grid">
               <div className="article-card">
@@ -389,7 +388,7 @@ export default function Home() {
                   <div className="article-meta"><span>۱۲ تیر ۱۴۰۴</span><span className="dot-sep"></span><span>۵ دقیقه مطالعه</span></div>
                   <h3>۷ اصل طراحی سایتی که مشتری را به خرید ترغیب می‌کند</h3>
                   <p>بررسی اصولی که باعث می‌شود بازدیدکننده سایت شما، به مشتری واقعی تبدیل شود.</p>
-                  <span className="article-link">ادامه مطلب ←</span>
+                  <Link href={'/articles'} className="article-link">ادامه مطلب ←</Link>
                 </div>
               </div>
               <div className="article-card">
@@ -401,7 +400,7 @@ export default function Home() {
                   <div className="article-meta"><span>۳ تیر ۱۴۰۴</span><span className="dot-sep"></span><span>۷ دقیقه مطالعه</span></div>
                   <h3>راهنمای سئو برای کسب‌وکارهای کوچک در سال جدید</h3>
                   <p>ساده‌ترین راه‌ها برای بهبود رتبه سایت شما در نتایج جست‌وجوی گوگل.</p>
-                  <span className="article-link">ادامه مطلب ←</span>
+                  <Link href={'/articles'} className="article-link">ادامه مطلب ←</Link>
                 </div>
               </div>
             </div>
